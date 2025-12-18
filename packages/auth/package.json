@@ -1,0 +1,31 @@
+{
+  "name": "@repo/auth",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./client": "./src/client.ts",
+    "./server": "./src/server.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules .turbo",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@polar-sh/better-auth": "catalog:",
+    "@repo/db": "workspace:*",
+    "@repo/payments": "workspace:*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "catalog:",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "better-auth": "catalog:",
+    "server-only": "catalog:"
+  }
+}

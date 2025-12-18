@@ -1,0 +1,37 @@
+{
+  "name": "@repo/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema/index.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf node_modules .turbo",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "dev": "drizzle-kit studio",
+    "lint": "eslint --max-warnings 0"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "catalog:",
+    "drizzle-orm": "catalog:",
+    "postgres": "^3.4.7",
+    "server-only": "catalog:",
+    "uuid": "^13.0.0",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "catalog:",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "drizzle-kit": "^0.31.5",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  }
+}

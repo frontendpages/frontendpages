@@ -1,0 +1,47 @@
+{
+  "name": "frontendpages",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Hashversion",
+    "email": "hello@hashversion.com",
+    "url": "https://hashversion.com"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "turbo build",
+    "build:web": "turbo build -F web...",
+    "check-types": "turbo run check-types",
+    "clean": "turbo clean",
+    "commit": "commit",
+    "db:generate": "turbo run db:generate",
+    "db:migrate": "turbo run db:migrate",
+    "db:push": "turbo run db:push",
+    "db:studio": "turbo run db:studio",
+    "dev:web": "turbo dev -F web...",
+    "docker:clean": "docker compose down -v",
+    "docker:down": "docker compose down",
+    "docker:up": "docker compose up -d",
+    "format": "prettier --write \"**/*.{css,ts,tsx,md,mdx}\"",
+    "knip": "knip --no-exit-code",
+    "lint": "turbo lint"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/prompt-cli": "^20.1.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
+    "@types/node": "catalog:",
+    "knip": "^5.66.2",
+    "lefthook": "^2.0.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "turbo": "2.5.6",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@10.18.1",
+  "engines": {
+    "node": ">=22"
+  }
+}

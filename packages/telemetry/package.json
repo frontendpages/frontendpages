@@ -1,0 +1,27 @@
+{
+  "name": "@repo/telemetry",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#env": "./env.ts"
+  },
+  "exports": {
+    "./sentry/with-sentry": "./src/sentry/with-sentry.ts",
+    "./sentry/client": "./src/sentry/client.ts",
+    "./sentry/server": "./src/sentry/server.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf node_modules .turbo"
+  },
+  "dependencies": {
+    "@sentry/nextjs": "catalog:",
+    "@t3-oss/env-nextjs": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
