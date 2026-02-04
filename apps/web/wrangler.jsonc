@@ -35,13 +35,13 @@
       "hyperdrive": [
         {
           "binding": "HYPERDRIVE",
-          "id": "27e9b0ddd58543be936c0964628c11fb",
+          "id": "de205afda4ea49fe9ae167eb4d92b935",
         },
       ],
       "kv_namespaces": [
         {
           "binding": "AUTH_CACHE",
-          "id": "4fed3baa113a4394aa56bc74c16063c1",
+          "id": "41d0080091de47c8a6c4151df8f0b80e",
         },
       ],
     },
@@ -49,7 +49,7 @@
     "production": {
       "routes": [
         {
-          "pattern": "web.frontendpages.dev",
+          "pattern": "frontendpages.com",
           "custom_domain": true,
         },
       ],
