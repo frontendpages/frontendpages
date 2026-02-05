@@ -1,0 +1,14 @@
+{
+  "typography": {
+    "font-family": {
+      "geist": {
+        "$type": "string",
+        "$value": "geist"
+      },
+      "krylon": {
+        "$type": "string",
+        "$value": "krylon"
+      }
+    }
+  }
+}

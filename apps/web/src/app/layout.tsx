@@ -4,6 +4,7 @@ import { type Viewport } from "next";
 import { domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
 import { fontsVariable } from "@repo/fonts";
+import { token } from "@repo/tokens/js";
 import type { Metadata } from "next";
 import "./styles.css";
 
@@ -43,7 +44,7 @@ export default function RootLayout({
         <m.body
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.23 }}
+          transition={{ duration: 1.23, ease: token("ease.in-out-quad") }}
           className="font-geist antialiased"
         >
           <Providers>
