@@ -1,3 +1,3 @@
-# Frontendpages
+# Frontend Pages
 
-![Frontendpages](./github.svg)
+![Frontend Pages](./github.svg)

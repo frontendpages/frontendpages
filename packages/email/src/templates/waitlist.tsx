@@ -29,7 +29,7 @@ const PrelaunchEmail = ({ inviteeEmail = "alan.turing@example.com" }: PrelaunchE
               height={32}
               alt="flower"
             />
-            <Heading>frontendpages</Heading>
+            <Heading>Frontend Pages</Heading>
             <Text>Thankyou for signing up for the waitlist! we'll let you know when we launch!</Text>
             <Hr className="h-1px border bg-neutral-400" />
             <Text className="text-[12px] leading-[24px] text-neutral-500">
