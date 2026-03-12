@@ -9,12 +9,12 @@
     "dev": "email dev --dir ./src/templates --port 4444"
   },
   "dependencies": {
-    "@react-email/components": "^0.5.4",
+    "@react-email/components": "^0.5.7",
     "react": "catalog:",
     "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@react-email/preview-server": "4.3.1",
+    "@react-email/preview-server": "4.3.2",
     "@repo/typescript-config": "workspace:*",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
