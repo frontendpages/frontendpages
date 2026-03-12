@@ -1,0 +1,25 @@
+{
+  "name": "@repo/seo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "default": "./src/index.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo dist node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "es-toolkit": "^1.44.0",
+    "react": "catalog:",
+    "schema-dts": "^1.1.5"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "next": "catalog:"
+  }
+}

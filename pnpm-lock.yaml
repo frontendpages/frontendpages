@@ -149,6 +149,9 @@ importers:
       '@repo/security':
         specifier: workspace:*
         version: link:../../packages/security
+      '@repo/seo':
+        specifier: workspace:*
+        version: link:../../packages/seo
       '@repo/tokens':
         specifier: workspace:*
         version: link:../../packages/design-system/tokens
@@ -535,6 +538,34 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
+
+  packages/seo:
+    dependencies:
+      es-toolkit:
+        specifier: ^1.44.0
+        version: 1.45.1
+      react:
+        specifier: 'catalog:'
+        version: 19.2.4
+      schema-dts:
+        specifier: ^1.1.5
+        version: 1.1.5
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../tooling/typescript-config
+      '@types/node':
+        specifier: 'catalog:'
+        version: 24.12.0
+      '@types/react':
+        specifier: 'catalog:'
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: 'catalog:'
+        version: 19.2.3(@types/react@19.2.14)
+      next:
+        specifier: 'catalog:'
+        version: 16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
 
   packages/telemetry:
     dependencies:
@@ -7836,6 +7867,9 @@ packages:
 
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
+
+  schema-dts@1.1.5:
+    resolution: {integrity: sha512-RJr9EaCmsLzBX2NDiO5Z3ux2BVosNZN5jo0gWgsyKvxKIUL5R3swNvoorulAeL9kLB0iTSX7V6aokhla2m7xbg==}
 
   schema-utils@4.3.3:
     resolution: {integrity: sha512-eflK8wEtyOE6+hsaRVPxvUKYCpRgzLqDTb8krvAsRIwOGlHoSgYLgBXoubGgLd2fT41/OUYdb48v4k4WWHQurA==}
@@ -16837,6 +16871,8 @@ snapshots:
   safer-buffer@2.1.2: {}
 
   scheduler@0.27.0: {}
+
+  schema-dts@1.1.5: {}
 
   schema-utils@4.3.3:
     dependencies:

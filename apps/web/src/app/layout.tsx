@@ -1,30 +1,29 @@
+import { organizationSchema, websiteSchema } from "@/app/ld";
 import { Providers } from "@/app/providers";
 import "@/lib/orpc.server";
-import { type Viewport } from "next";
 import { domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
 import { fontsVariable } from "@repo/fonts";
+import { config, constructMetadata, JsonLd } from "@repo/seo";
 import { token } from "@repo/tokens/js";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./styles.css";
 
-export const metadata: Metadata = {
-  title: "Frontend Pages",
-  icons: {
-    icon: [
-      {
-        media: "(prefers-color-scheme: light)",
-        url: "/images/favicon-dark.png",
-        href: "/images/favicon-dark.png",
-      },
-      {
-        media: "(prefers-color-scheme: dark)",
-        url: "/images/favicon-light.png",
-        href: "/images/favicon-light.png",
-      },
-    ],
-  },
-};
+export const metadata: Metadata = constructMetadata({
+  title: config.title,
+  description: config.description,
+  alternates: { canonical: "/" },
+  icons: [
+    {
+      media: "(prefers-color-scheme: light)",
+      url: "/images/favicon-dark.png",
+    },
+    {
+      media: "(prefers-color-scheme: dark)",
+      url: "/images/favicon-light.png",
+    },
+  ],
+});
 
 export const viewport: Viewport = {
   themeColor: [
@@ -40,6 +39,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="ltr" className={fontsVariable} suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://cdn.frontendpages.com" />
+        <link rel="dns-prefetch" href="https://cdn.frontendpages.com" />
+        <JsonLd code={websiteSchema} />
+        <JsonLd code={organizationSchema} />
+      </head>
       <LazyMotion features={domAnimation}>
         <m.body
           initial={{ opacity: 0 }}
