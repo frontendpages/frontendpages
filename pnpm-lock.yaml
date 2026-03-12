@@ -166,7 +166,7 @@ importers:
         version: 12.23.25(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next:
         specifier: 'catalog:'
-        version: 16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        version: 16.1.6(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react:
         specifier: 'catalog:'
         version: 19.2.4
@@ -179,10 +179,10 @@ importers:
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../../quark/eslint-config
+        version: link:../../tooling/eslint-config
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../quark/typescript-config
+        version: link:../../tooling/typescript-config
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.16
@@ -228,7 +228,7 @@ importers:
         version: 4.20251014.0
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../quark/typescript-config
+        version: link:../../tooling/typescript-config
       '@types/node':
         specifier: 'catalog:'
         version: 24.3.1
@@ -250,7 +250,7 @@ importers:
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../quark/typescript-config
+        version: link:../../tooling/typescript-config
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -281,10 +281,10 @@ importers:
         version: 4.20251014.0
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../../quark/eslint-config
+        version: link:../../tooling/eslint-config
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../quark/typescript-config
+        version: link:../../tooling/typescript-config
       '@types/node':
         specifier: 'catalog:'
         version: 24.3.1
@@ -321,10 +321,10 @@ importers:
         version: 4.20251014.0
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../../quark/eslint-config
+        version: link:../../tooling/eslint-config
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../quark/typescript-config
+        version: link:../../tooling/typescript-config
       '@types/node':
         specifier: 'catalog:'
         version: 24.3.1
@@ -361,10 +361,10 @@ importers:
         version: 4.20251014.0
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../../quark/eslint-config
+        version: link:../../tooling/eslint-config
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../quark/typescript-config
+        version: link:../../tooling/typescript-config
       '@types/node':
         specifier: 'catalog:'
         version: 24.3.1
@@ -382,11 +382,11 @@ importers:
     dependencies:
       next:
         specifier: 'catalog:'
-        version: 16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        version: 16.1.6(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../../quark/typescript-config
+        version: link:../../../tooling/typescript-config
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -425,7 +425,7 @@ importers:
         version: 2.1.1
       next:
         specifier: 'catalog:'
-        version: 16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        version: 16.1.6(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -441,10 +441,10 @@ importers:
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
-        version: link:../../../quark/eslint-config
+        version: link:../../../tooling/eslint-config
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../../quark/typescript-config
+        version: link:../../../tooling/typescript-config
       '@types/react':
         specifier: 'catalog:'
         version: 19.2.2
@@ -478,7 +478,7 @@ importers:
         version: 4.3.1(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(postcss@8.5.6)
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../quark/typescript-config
+        version: link:../../tooling/typescript-config
       '@types/react':
         specifier: 'catalog:'
         version: 19.2.2
@@ -509,7 +509,7 @@ importers:
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../quark/typescript-config
+        version: link:../../tooling/typescript-config
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -528,7 +528,7 @@ importers:
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../quark/typescript-config
+        version: link:../../tooling/typescript-config
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -537,7 +537,7 @@ importers:
     dependencies:
       '@sentry/nextjs':
         specifier: 'catalog:'
-        version: 10.26.0(@opentelemetry/context-async-hooks@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)(webpack@5.102.1)
+        version: 10.26.0(@opentelemetry/context-async-hooks@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))(next@16.1.6(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)(webpack@5.102.1)
       '@t3-oss/env-nextjs':
         specifier: 'catalog:'
         version: 0.13.8(typescript@5.9.3)(zod@4.1.12)
@@ -547,12 +547,12 @@ importers:
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
-        version: link:../../quark/typescript-config
+        version: link:../../tooling/typescript-config
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
 
-  quark/eslint-config:
+  tooling/eslint-config:
     devDependencies:
       '@eslint/js':
         specifier: ^9.38.0
@@ -591,7 +591,7 @@ importers:
         specifier: ^8.46.2
         version: 8.46.2(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3)
 
-  quark/typescript-config: {}
+  tooling/typescript-config: {}
 
 packages:
 
@@ -10308,7 +10308,7 @@ snapshots:
     dependencies:
       '@c15t/react': 1.8.1(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.204.0(@opentelemetry/api@1.9.0))(@types/pg@8.15.5)(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(immer@10.2.0)(postgres@3.4.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typeorm@0.3.27(reflect-metadata@0.2.2))(use-sync-external-store@1.6.0(react@19.2.4))
       '@c15t/translations': 1.8.0
-      next: 16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      next: 16.1.6(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
     transitivePeerDependencies:
@@ -11382,7 +11382,7 @@ snapshots:
 
   '@nosecone/next@1.0.0-beta.15(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))':
     dependencies:
-      next: 16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      next: 16.1.6(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       nosecone: 1.0.0-beta.15
 
   '@opennextjs/aws@3.9.0':
@@ -13826,7 +13826,7 @@ snapshots:
 
   '@sentry/core@10.26.0': {}
 
-  '@sentry/nextjs@10.26.0(@opentelemetry/context-async-hooks@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)(webpack@5.102.1)':
+  '@sentry/nextjs@10.26.0(@opentelemetry/context-async-hooks@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))(next@16.1.6(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)(webpack@5.102.1)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/semantic-conventions': 1.38.0
@@ -13839,7 +13839,7 @@ snapshots:
       '@sentry/react': 10.26.0(react@19.2.4)
       '@sentry/vercel-edge': 10.26.0
       '@sentry/webpack-plugin': 4.6.1(webpack@5.102.1)
-      next: 16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      next: 16.1.6(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       resolve: 1.22.8
       rollup: 4.53.3
       stacktrace-parser: 0.1.11
@@ -15264,7 +15264,7 @@ snapshots:
       nanostores: 1.0.1
       zod: 4.1.12
     optionalDependencies:
-      next: 16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      next: 16.1.6(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
 
@@ -17341,7 +17341,7 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
-  next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  next@16.1.6(@babel/core@7.28.5)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
       '@next/env': 16.1.6
       '@swc/helpers': 0.5.15
@@ -17350,7 +17350,7 @@ snapshots:
       postcss: 8.4.31
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
-      styled-jsx: 5.1.6(react@19.2.4)
+      styled-jsx: 5.1.6(@babel/core@7.28.5)(react@19.2.4)
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.1.6
       '@next/swc-darwin-x64': 16.1.6
@@ -18491,10 +18491,12 @@ snapshots:
     optionalDependencies:
       '@babel/core': 7.26.10
 
-  styled-jsx@5.1.6(react@19.2.4):
+  styled-jsx@5.1.6(@babel/core@7.28.5)(react@19.2.4):
     dependencies:
       client-only: 0.0.1
       react: 19.2.4
+    optionalDependencies:
+      '@babel/core': 7.28.5
 
   sucrase@3.35.0:
     dependencies:
