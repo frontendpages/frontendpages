@@ -9,6 +9,7 @@ const bundleAnalyzer = withBundleAnalyzer({
 const withMDX = createMDX({});
 
 const nextConfig: NextConfig = {
+  serverExternalPackages: ["@takumi-rs/image-response"],
   poweredByHeader: false,
   reactCompiler: true,
   cacheComponents: false,
