@@ -47,15 +47,5 @@ export default defineConfig([
       "react/react-in-jsx-scope": "off",
     },
   },
-  globalIgnores([
-    ".next/**",
-    ".open-next/**",
-    ".wrangler/**",
-    "out/**",
-    "build/**",
-    "**/*.ico",
-    "**/*.css",
-    "next-env.d.ts",
-    "worker-configuration.d.ts",
-  ]),
+  globalIgnores([".next/**", "out/**", "build/**", "**/*.ico", "**/*.css", "next-env.d.ts"]),
 ]);

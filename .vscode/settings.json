@@ -1,10 +1,10 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "js/ts.tsdk.path": "./node_modules/typescript/lib",
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
-    "source.organizeImports": "always",
+    "source.organizeImports": "always"
   },
   "eslint.rules.customizations": [
     {
@@ -12,12 +12,7 @@
       "severity": "warn"
     }
   ],
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[css]": {
@@ -43,12 +38,8 @@
     "**/app/**/layout.tsx": "${dirname} - layout",
     "**/components/**/index.tsx": "${dirname} - component"
   },
-  "tailwindCSS.classFunctions": [
-    "cva",
-    "cx"
-  ],
+  "tailwindCSS.classFunctions": ["cva", "cx"],
   "files.associations": {
-    "*.css": "tailwindcss",
-    "wrangler.json": "jsonc"
+    "*.css": "tailwindcss"
   }
 }

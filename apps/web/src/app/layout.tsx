@@ -1,12 +1,11 @@
-import { organizationSchema, websiteSchema } from "@/app/ld";
-import { Providers } from "@/app/providers";
-import "@/lib/orpc.server";
 import { domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
 import { fontsVariable } from "@repo/fonts";
 import { config, constructMetadata, JsonLd } from "@repo/seo";
 import { token } from "@repo/tokens/js";
 import type { Metadata, Viewport } from "next";
+import { organizationSchema, websiteSchema } from "@/app/ld";
+import { Providers } from "@/app/providers";
 import "./styles.css";
 
 export const metadata: Metadata = constructMetadata({

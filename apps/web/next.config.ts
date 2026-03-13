@@ -1,6 +1,4 @@
 import withBundleAnalyzer from "@next/bundle-analyzer";
-import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
-// import { withSentry } from "@repo/telemetry/sentry/with-sentry";
 import type { NextConfig } from "next";
 
 const bundleAnalyzer = withBundleAnalyzer({
@@ -29,7 +27,5 @@ const nextConfig: NextConfig = {
   // This is required to support PostHog trailing slash API requests
   skipTrailingSlashRedirect: true,
 };
-
-initOpenNextCloudflareForDev();
 
 export default bundleAnalyzer(nextConfig);
