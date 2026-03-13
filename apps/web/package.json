@@ -23,7 +23,7 @@
     "@takumi-rs/image-response": "^0.71.7",
     "fumadocs-core": "^16.6.16",
     "fumadocs-mdx": "^14.2.9",
-    "fumadocs-ui": "^16.6.16",
+    "fumadocs-ui": "npm:@fumadocs/base-ui@latest",
     "motion": "^12.23.25",
     "next": "catalog:",
     "react": "catalog:",
