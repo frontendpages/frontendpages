@@ -1,6 +1,7 @@
 {
   "extends": "@repo/typescript-config/app/dom",
   "compilerOptions": {
+    "baseUrl": ".",
     "incremental": true,
     "module": "esnext",
     "plugins": [
@@ -9,9 +10,17 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "collections/*": [".source/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js", ".next/types/**/*.ts"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    "next.config.js",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

@@ -1,7 +1,12 @@
 "use client";
 
+import { RootProvider } from "fumadocs-ui/provider/next";
 import { ThemeProvider } from "@repo/ui";
 
 export function Providers(props: { children: React.ReactNode }) {
-  return <ThemeProvider>{props.children}</ThemeProvider>;
+  return (
+    <RootProvider>
+      <ThemeProvider>{props.children}</ThemeProvider>
+    </RootProvider>
+  );
 }

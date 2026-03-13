@@ -12,6 +12,7 @@ export const config = {
       x: "https://x.com/frontendpages",
       instagram: "https://www.instagram.com/frontendpages",
       facebook: "https://facebook.com/frontendpages",
+      github: "https://github.com/frontendpages/frontendpages",
       linkedin: "https://www.linkedin.com/company/frontendpages",
       bluesky: "https://bsky.app/profile/frontendpages.com",
     },

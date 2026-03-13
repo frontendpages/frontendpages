@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "build": "next build",
-    "check-types": "next typegen && tsc --noEmit",
+    "check-types": "fumadocs-mdx && next typegen && tsc --noEmit",
     "clean": "rm -rf node_modules .next .open-next .wrangler .turbo",
     "dev": "next dev",
     "lint": "eslint --max-warnings 0 --report-unused-disable-directives-severity warn",
+    "postinstall": "fumadocs-mdx",
     "start": "next start"
   },
   "dependencies": {
@@ -19,6 +20,10 @@
     "@repo/seo": "workspace:*",
     "@repo/tokens": "workspace:*",
     "@repo/ui": "workspace:*",
+    "@takumi-rs/image-response": "^0.71.7",
+    "fumadocs-core": "^16.6.16",
+    "fumadocs-mdx": "^14.2.9",
+    "fumadocs-ui": "^16.6.16",
     "motion": "^12.23.25",
     "next": "catalog:",
     "react": "catalog:",
@@ -30,6 +35,7 @@
     "@repo/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "^4",
     "@tanstack/react-query-devtools": "^5.90.2",
+    "@types/mdx": "^2.0.13",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",

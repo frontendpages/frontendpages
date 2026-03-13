@@ -1,12 +1,12 @@
+import { organizationSchema, websiteSchema } from "@/app/ld";
+import { Providers } from "@/app/providers";
+import "@/styles/styles.css";
 import { domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
 import { fontsVariable } from "@repo/fonts";
 import { config, constructMetadata, JsonLd } from "@repo/seo";
 import { token } from "@repo/tokens/js";
 import type { Metadata, Viewport } from "next";
-import { organizationSchema, websiteSchema } from "@/app/ld";
-import { Providers } from "@/app/providers";
-import "./styles.css";
 
 export const metadata: Metadata = constructMetadata({
   title: config.title,
@@ -49,27 +49,11 @@ export default function RootLayout({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.23, ease: token("ease.in-out-quad") }}
-          className="font-geist antialiased"
+          className="font-geist flex min-h-screen flex-col antialiased"
         >
-          <Providers>
-            <Banner />
-            {children}
-          </Providers>
+          <Providers>{children}</Providers>
         </m.body>
       </LazyMotion>
     </html>
-  );
-}
-
-function Banner() {
-  return (
-    <div className="sticky top-0 hidden flex-row items-center justify-center bg-black px-8 py-2 text-sm text-white md:flex dark:bg-white dark:text-black">
-      <p>
-        You can also access frontendpages.com via {""}
-        <a href="https://frontend.page" className="font-bold hover:opacity-80">
-          frontend.page
-        </a>
-      </p>
-    </div>
   );
 }
