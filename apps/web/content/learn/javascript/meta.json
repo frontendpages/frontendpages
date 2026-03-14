@@ -1,0 +1,6 @@
+{
+  "title": "JavaScript",
+  "root": true,
+  "defaultRoot": true,
+  "pages": ["---Introduction---", "index"]
+}
