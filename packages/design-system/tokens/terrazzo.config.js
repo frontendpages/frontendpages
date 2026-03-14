@@ -5,10 +5,10 @@ import tailwind from "@terrazzo/plugin-tailwind";
 
 export default defineConfig({
   tokens: [
-    "./src/tokens/primitives/colors.json",
-    "./src/tokens/colors.json",
-    "./src/tokens/easings.json",
-    "./src/tokens/typography.json",
+    "./src/primitives/colors.json",
+    "./src/semantics/colors.json",
+    "./src/semantics/easings.json",
+    "./src/semantics/typography.json",
   ],
   outDir: "./dist/",
   plugins: [
