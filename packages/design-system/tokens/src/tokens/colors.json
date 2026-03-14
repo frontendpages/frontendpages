@@ -36,6 +36,24 @@
         }
       }
     },
+    "selection": {
+      "$type": "color",
+      "$value": "{color.onyx.200}",
+      "$extensions": {
+        "mode": {
+          "dark": "{color.onyx.200}"
+        }
+      }
+    },
+    "selection-foreground": {
+      "$type": "color",
+      "$value": "{color.black}",
+      "$extensions": {
+        "mode": {
+          "dark": "{color.black}"
+        }
+      }
+    },
     "secondary": {
       "$type": "color",
       "$value": "{color.white}"

@@ -3,6 +3,10 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
+  *::selection {
+    @apply bg-selection text-selection-foreground;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
