@@ -14,6 +14,14 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   cacheComponents: false,
   typedRoutes: true,
+  async rewrites() {
+    return [
+      {
+        source: "/learn/:path*.mdx",
+        destination: "/llms.mdx/learn/:path*",
+      },
+    ];
+  },
 };
 
 export default withMDX(bundleAnalyzer(nextConfig));
