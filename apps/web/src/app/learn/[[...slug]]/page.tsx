@@ -30,7 +30,7 @@ export default async function Page(props: PageProps<"/learn/[[...slug]]">) {
         <MarkdownCopyButton markdownUrl={`${page.url}.mdx`} />
         <ViewOptionsPopover
           markdownUrl={`${page.url}.mdx`}
-          githubUrl={`${config.url.platform.github}/blob/main/content/docs/${page.path}`}
+          githubUrl={`${config.url.platform.github}/blob/main/apps/web/content/learn/${page.path}`}
         />
       </div>
       <DocsBody>
