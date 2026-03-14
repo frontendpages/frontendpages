@@ -1,0 +1,6 @@
+{
+  "title": "Overview",
+  "root": true,
+  "icon": "CircleDashed",
+  "pages": ["index"]
+}
