@@ -1,0 +1,6 @@
+{
+  "title": "Nextjs",
+  "root": true,
+  "defaultRoot": true,
+  "pages": ["---Introduction---", "index"]
+}
