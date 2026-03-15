@@ -1,9 +1,9 @@
 export const config = {
-  app: "Frontendpages",
+  app: "Frontend Pages",
   handle: "@frontendpages",
-  title: "Frontendpages :: The Readable Web Platform Documentation",
+  title: "Frontend Pages :: The Readable Web Platform Documentation",
   description:
-    "Frontendpages is a practical guide to the web platform. Learn HTML elements, CSS layout systems, browser rendering, DOM behavior, accessibility, and modern frontend interface patterns.",
+    "Frontend Pages is a practical guide to the web platform. Learn HTML elements, CSS layout systems, browser rendering, DOM behavior, accessibility, and modern frontend interface patterns.",
   url: {
     base: "https://frontendpages.com",
     og: "https://cdn.frontendpages.com/brand/opengraph-image.png",
