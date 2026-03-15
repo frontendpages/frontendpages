@@ -2,5 +2,23 @@
   "title": "SVG",
   "root": true,
   "defaultRoot": true,
-  "pages": ["---Introduction---", "index"]
+  "pages": [
+    "---Introduction---",
+    "index",
+    "what-is-svg",
+    "how-svg-works",
+    "svg-vs-raster-images",
+    "---Foundations---",
+    "document-structure",
+    "viewbox",
+    "coordinate-system",
+    "---Catagories---",
+    "elements",
+    "attributes",
+    "gradients",
+    "patterns",
+    "clipping",
+    "masking",
+    "filters"
+  ]
 }
