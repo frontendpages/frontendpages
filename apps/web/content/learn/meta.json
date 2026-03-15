@@ -1,3 +1,14 @@
 {
-  "pages": ["(overview)", "html", "css", "javascript", "react", "tailwindcss", "nextjs", "motion", "svg"]
+  "pages": [
+    "(overview)",
+    "html",
+    "css",
+    "javascript",
+    "react",
+    "tailwindcss",
+    "nextjs",
+    "motion",
+    "svg",
+    "accessibility"
+  ]
 }
