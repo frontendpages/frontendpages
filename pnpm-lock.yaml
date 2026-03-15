@@ -139,7 +139,7 @@ importers:
         version: 14.2.9(@types/mdast@4.0.4)(@types/mdx@2.0.13)(@types/react@19.2.14)(fumadocs-core@16.6.16(@mdx-js/mdx@3.1.1)(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.14)(lucide-react@0.577.0(react@19.2.4))(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.1.13))(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
       fumadocs-ui:
         specifier: npm:@fumadocs/base-ui@latest
-        version: '@fumadocs/base-ui@16.6.16(@takumi-rs/image-response@0.71.7)(@types/mdx@2.0.13)(@types/react@19.2.14)(fumadocs-core@16.6.16(@mdx-js/mdx@3.1.1)(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.14)(lucide-react@0.577.0(react@19.2.4))(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.1.13))(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwindcss@4.2.1)'
+        version: '@fumadocs/base-ui@16.6.17(@takumi-rs/image-response@0.71.7)(@types/mdx@2.0.13)(@types/react@19.2.14)(fumadocs-core@16.6.16(@mdx-js/mdx@3.1.1)(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.14)(lucide-react@0.577.0(react@19.2.4))(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.1.13))(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwindcss@4.2.1)'
       motion:
         specifier: ^12.23.25
         version: 12.36.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -402,6 +402,9 @@ importers:
       '@repo/tokens':
         specifier: workspace:*
         version: link:../tokens
+      '@toolwind/corner-shape':
+        specifier: 0.0.8-3
+        version: 0.0.8-3
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1635,13 +1638,13 @@ packages:
   '@formatjs/intl-localematcher@0.8.1':
     resolution: {integrity: sha512-xwEuwQFdtSq1UKtQnyTZWC+eHdv7Uygoa+H2k/9uzBVQjDyp9r20LNDNKedWXll7FssT3GRHvqsdJGYSUWqYFA==}
 
-  '@fumadocs/base-ui@16.6.16':
-    resolution: {integrity: sha512-TO+3gWvnoIsF4B4iNBLn3wEN/CNJMbWgiTZJ2+koJNf/c8CS0KYpp9UxO4DM9vYoFYIjRwa2kgxvhKHQcQA6mQ==}
+  '@fumadocs/base-ui@16.6.17':
+    resolution: {integrity: sha512-VbsLM/dmtZSa/+/fi29GProlH2pk3KtQdncHrpcmHf+jfIAoAnJNR9tRkNylyUZOrd3vYB6h1+NJnDu7Dr/jmg==}
     peerDependencies:
       '@takumi-rs/image-response': '*'
       '@types/mdx': '*'
       '@types/react': '*'
-      fumadocs-core: 16.6.16
+      fumadocs-core: 16.6.17
       next: 16.x.x
       react: ^19.2.0
       react-dom: ^19.2.0
@@ -3894,6 +3897,9 @@ packages:
   '@terrazzo/token-tools@0.10.5':
     resolution: {integrity: sha512-XQ6LDOmEZC8kesrhF48pvhz8F0RJsi56vQUg97VCmiKCOXBwPFJ7bOfv9M3f/tnYWo8eAs3EJvrCgMckZPKhbg==}
 
+  '@toolwind/corner-shape@0.0.8-3':
+    resolution: {integrity: sha512-MPIF81F2bhtXbzEeXF0vnL+PKpnopCHOzBspOkK8osMzWQvPUujZn2XZOMdsu4DF6wsVbbRYQtdsJr486HmIPQ==}
+
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
 
@@ -3971,6 +3977,9 @@ packages:
 
   '@types/mysql@2.15.27':
     resolution: {integrity: sha512-YfWiV16IY0OeBfBCk8+hXKmdTKrKlwKN1MNKAPBu5JYxLwBEZl7QzeEpGnlZb3VMGJrrGmB84gXiH+ofs/TezA==}
+
+  '@types/node@20.19.37':
+    resolution: {integrity: sha512-8kzdPJ3FsNsVIurqBs7oodNnCEVbni9yUEkaHbgptDACOPW04jimGagZ51E6+lXUwJjgnBw+hyko/lkFWCldqw==}
 
   '@types/node@24.12.0':
     resolution: {integrity: sha512-GYDxsZi3ChgmckRT9HPU0WEhKLP08ev/Yfcq2AstjrDASOYCSXeyjDsHg4v5t4jOj7cyDX3vmprafKlWIG9MXQ==}
@@ -7533,6 +7542,9 @@ packages:
   unconfig@7.5.0:
     resolution: {integrity: sha512-oi8Qy2JV4D3UQ0PsopR28CzdQ3S/5A1zwsUwp/rosSbfhJ5z7b90bIyTwi/F7hCLD4SGcZVjDzd4XoUQcEanvA==}
 
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
@@ -8639,7 +8651,7 @@ snapshots:
       '@formatjs/fast-memoize': 3.1.0
       tslib: 2.8.1
 
-  '@fumadocs/base-ui@16.6.16(@takumi-rs/image-response@0.71.7)(@types/mdx@2.0.13)(@types/react@19.2.14)(fumadocs-core@16.6.16(@mdx-js/mdx@3.1.1)(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.14)(lucide-react@0.577.0(react@19.2.4))(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.1.13))(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwindcss@4.2.1)':
+  '@fumadocs/base-ui@16.6.17(@takumi-rs/image-response@0.71.7)(@types/mdx@2.0.13)(@types/react@19.2.14)(fumadocs-core@16.6.16(@mdx-js/mdx@3.1.1)(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.14)(lucide-react@0.577.0(react@19.2.4))(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.1.13))(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(tailwindcss@4.2.1)':
     dependencies:
       '@base-ui/react': 1.3.0(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@fumadocs/tailwind': 0.0.3(tailwindcss@4.2.1)
@@ -11007,6 +11019,10 @@ snapshots:
       culori: 4.0.2
       wildcard-match: 5.1.4
 
+  '@toolwind/corner-shape@0.0.8-3':
+    dependencies:
+      '@types/node': 20.19.37
+
   '@tybys/wasm-util@0.10.1':
     dependencies:
       tslib: 2.8.1
@@ -11087,6 +11103,10 @@ snapshots:
   '@types/mysql@2.15.27':
     dependencies:
       '@types/node': 25.5.0
+
+  '@types/node@20.19.37':
+    dependencies:
+      undici-types: 6.21.0
 
   '@types/node@24.12.0':
     dependencies:
@@ -15185,6 +15205,8 @@ snapshots:
       jiti: 2.6.1
       quansync: 1.0.0
       unconfig-core: 7.5.0
+
+  undici-types@6.21.0: {}
 
   undici-types@7.16.0: {}
 

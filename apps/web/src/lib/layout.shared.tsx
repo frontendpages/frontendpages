@@ -7,8 +7,10 @@ export function baseOptions(): BaseLayoutProps {
     nav: {
       title: (
         <div className="flex items-center justify-center gap-2">
-          <Icons.Logo className="size-5" />
-          <p className="text-[18px]">{config.app}</p>
+          <div className="corner-squircle rounded-[50] bg-black p-1 text-white dark:bg-white dark:text-black">
+            <Icons.Logo className="size-3" />
+          </div>
+          <p>{config.app}</p>
         </div>
       ),
     },
