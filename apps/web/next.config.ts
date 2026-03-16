@@ -31,6 +31,11 @@ const nextConfig: NextConfig = {
         destination: "/learn/nextjs/:path*",
         permanent: true,
       },
+      {
+        source: "/learn/tailwind/:path*",
+        destination: "/learn/tailwindcss/:path*",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {
