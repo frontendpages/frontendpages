@@ -6,7 +6,7 @@ export default function Layout({ children }: LayoutProps<"/">) {
   const base = baseOptions();
   return (
     <DocsLayout
-      sidebar={{ className: "rounded-none border-neutral-800" }}
+      sidebar={{ className: "rounded-none border-neutral-200 dark:border-neutral-800" }}
       tree={source.getPageTree()}
       {...base}
     >
