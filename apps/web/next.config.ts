@@ -14,6 +14,25 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   cacheComponents: false,
   typedRoutes: true,
+  async redirects() {
+    return [
+      {
+        source: "/learn/a11y/:path*",
+        destination: "/learn/accessibility/:path*",
+        permanent: true,
+      },
+      {
+        source: "/learn/reactjs/:path*",
+        destination: "/learn/react/:path*",
+        permanent: true,
+      },
+      {
+        source: "/learn/next/:path*",
+        destination: "/learn/nextjs/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return [
       {
