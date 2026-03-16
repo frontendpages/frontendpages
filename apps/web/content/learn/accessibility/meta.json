@@ -1,5 +1,21 @@
 {
   "title": "Accessibility",
   "root": true,
-  "pages": ["---Introduction---", "index"]
+  "pages": [
+    "---Introduction---",
+    "index",
+    "what-is-accessibility",
+    "why-accessibility-matters",
+    "how-people-use-the-web",
+    "assistive-technologies",
+    "accessibility-principles",
+    "accessibility-standards",
+    "---Concepts---",
+    "semantic-html",
+    "keyboard",
+    "visual-design",
+    "aria",
+    "debugging",
+    "testing"
+  ]
 }
