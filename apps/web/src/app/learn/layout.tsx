@@ -5,7 +5,11 @@ import { source } from "@/lib/source";
 export default function Layout({ children }: LayoutProps<"/">) {
   const base = baseOptions();
   return (
-    <DocsLayout tree={source.getPageTree()} {...base}>
+    <DocsLayout
+      sidebar={{ className: "rounded-none border-neutral-800" }}
+      tree={source.getPageTree()}
+      {...base}
+    >
       {children}
     </DocsLayout>
   );
