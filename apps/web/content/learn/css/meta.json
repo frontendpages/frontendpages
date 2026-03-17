@@ -1,5 +1,64 @@
 {
   "title": "CSS",
   "root": true,
-  "pages": ["---Introduction---", "index"]
+  "pages": [
+    "---Introduction---",
+    "index",
+    "what-is-css",
+    "how-css-works",
+    "why-css-is-so-weird",
+    "css-syntax",
+
+    "---Fundamentals---",
+    "selectors",
+    "cascade",
+    "specificity",
+    "inheritance",
+    "box-model",
+    "units",
+
+    "---Styling---",
+    "colors",
+    "backgrounds",
+    "borders",
+    "typography",
+    "spacing",
+    "shadows",
+
+    "---Layout---",
+    "display",
+    "position",
+    "flexbox",
+    "grid",
+    "overflow",
+    "z-index",
+
+    "---Responsive---",
+    "media-queries",
+    "fluid-design",
+    "container-queries",
+
+    "---Advanced---",
+    "transforms",
+    "transitions",
+    "animations",
+    "variables",
+    "functions",
+
+    "---Architecture---",
+    "css-architecture",
+    "naming-conventions",
+    "component-styling",
+
+    "---Debugging---",
+    "debugging",
+    "devtools",
+    "common-issues",
+
+    "---Accessibility---",
+    "accessible-css",
+    "color-contrast",
+    "focus-states",
+    "reduced-motion"
+  ]
 }
