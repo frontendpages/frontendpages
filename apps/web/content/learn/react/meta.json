@@ -2,5 +2,52 @@
   "title": "React",
   "root": true,
   "defaultRoot": true,
-  "pages": ["---Introduction---", "index"]
+  "pages": [
+    "---Introduction---",
+    "index",
+    "what-is-react",
+    "how-react-works",
+    "react-and-react-dom",
+
+    "---Fundamentals---",
+    "jsx",
+    "curly-braces",
+    "fragments",
+    "components",
+    "rendering",
+    "properties",
+    "children",
+    "keys",
+    "state",
+    "event-handling",
+
+    "---Concepts---",
+    "composition",
+    "state-management",
+    "hooks",
+    "side-effects",
+    "forms",
+    "refs",
+    "performance",
+    "testing",
+
+    "--Advanced---",
+    "purity",
+    "strict-mode",
+    "portals",
+    "suspense",
+    "error-boundaries",
+
+    "---Modern React---",
+    "react-server-components",
+    "directives",
+    "actions",
+    "react-compiler",
+
+    "---Engineering---",
+    "component-api-design",
+    "full-stack-react",
+
+    "---Rules---"
+  ]
 }
