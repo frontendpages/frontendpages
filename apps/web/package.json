@@ -42,7 +42,6 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "catalog:",
     "tailwindcss": "catalog:",
-    "typescript": "catalog:",
-    "wrangler": "catalog:"
+    "typescript": "catalog:"
   }
 }
