@@ -8,6 +8,10 @@
       "krylon": {
         "$type": "string",
         "$value": "krylon"
+      },
+      "neutral-sans": {
+        "$type": "string",
+        "$value": "neutral-sans"
       }
     }
   }

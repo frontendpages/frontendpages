@@ -1,10 +1,12 @@
-import { Banner } from "@/components/banner";
+import { Banner } from "@/components/landing/banner";
+import { Header } from "@/components/landing/header";
 
 export default function HomeLayout({ children }: LayoutProps<"/">) {
   return (
     <>
       <Banner />
-      {children}
+      <Header />
+      <main>{children}</main>
     </>
   );
 }

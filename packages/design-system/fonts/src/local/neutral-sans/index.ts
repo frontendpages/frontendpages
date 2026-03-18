@@ -1,13 +1,14 @@
 import localFont from "next/font/local";
 
-export const krylon = localFont({
+export const neutralSans = localFont({
   src: [
     {
-      path: "./Krylon-Regular.woff2",
+      path: "./NeutralSansVF.woff2",
       weight: "400",
       style: "normal",
     },
   ],
   display: "swap",
-  variable: "--font-krylon",
+  variable: "--font-neutral-sans",
+  preload: true,
 });

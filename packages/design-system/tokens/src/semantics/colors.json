@@ -64,7 +64,12 @@
     },
     "border": {
       "$type": "color",
-      "$value": "{color.onyx.400}"
+      "$value": "{color.onyx.800}",
+      "$extensions": {
+        "mode": {
+          "dark": "{color.onyx.400}"
+        }
+      }
     },
     "input": {
       "$type": "color",

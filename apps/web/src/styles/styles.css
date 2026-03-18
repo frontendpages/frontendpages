@@ -5,3 +5,8 @@
 
 /** @see https://tailwindcss.com/docs/detecting-classes-in-source-files#explicitly-registering-sources   */
 @source "../../node_modules/@repo/ui/dist/**/*.{js,ts,jsx,tsx}";
+
+@theme {
+  --color-fd-background: #ffffff;
+  --color-fd-foreground: #080808;
+}

@@ -8,6 +8,20 @@
     @apply bg-selection text-selection-foreground;
   }
 
+  * {
+    &::-webkit-scrollbar {
+      width: 0.25rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      @apply bg-white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply bg-black;
+    }
+  }
+
   body {
     @apply bg-background text-foreground;
   }
