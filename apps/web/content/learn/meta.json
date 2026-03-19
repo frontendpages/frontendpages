@@ -5,12 +5,16 @@
     "css",
     "svg",
     "accessibility",
+    "web-security",
     "javascript",
     "react",
     "nextjs",
     "tailwindcss",
     "motion",
     "gsap",
+    "webgl",
+    "glsl",
+    "webgpu",
     "threejs",
     "react-three-fiber"
   ]
