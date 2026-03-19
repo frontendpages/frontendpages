@@ -3,13 +3,15 @@
     "(overview)",
     "html",
     "css",
+    "svg",
+    "accessibility",
     "javascript",
     "react",
-    "tailwindcss",
     "nextjs",
+    "tailwindcss",
     "motion",
     "gsap",
-    "svg",
-    "accessibility"
+    "threejs",
+    "react-three-fiber"
   ]
 }

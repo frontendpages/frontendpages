@@ -1,0 +1,6 @@
+{
+  "title": "React Three Fiber",
+  "root": true,
+  "defaultRoot": true,
+  "pages": ["---Introduction---", "index"]
+}
