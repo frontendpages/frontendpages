@@ -27,11 +27,10 @@
 
     "---Layout---",
     "display",
-    "position",
+    "positioning",
     "flexbox",
     "grid",
     "overflow",
-    "z-index",
 
     "---Responsive---",
     "media-queries",
