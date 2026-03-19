@@ -7,6 +7,7 @@
     "accessibility",
     "web-security",
     "javascript",
+    "typescript",
     "react",
     "nextjs",
     "tailwindcss",
@@ -16,6 +17,9 @@
     "glsl",
     "webgpu",
     "threejs",
-    "react-three-fiber"
+    "react-three-fiber",
+    "pwa",
+    "json-ld",
+    "open-graph"
   ]
 }

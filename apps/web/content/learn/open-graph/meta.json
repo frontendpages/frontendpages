@@ -1,0 +1,6 @@
+{
+  "title": "Open Graph",
+  "root": true,
+  "defaultRoot": true,
+  "pages": ["---Introduction---", "index"]
+}
