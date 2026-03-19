@@ -1,5 +1,5 @@
 {
-  "title": "Nextjs",
+  "title": "Next.js",
   "root": true,
   "defaultRoot": true,
   "pages": ["---Introduction---", "index"]
