@@ -1,3 +1,118 @@
 ---
 title: "Web Security :: Overview"
 ---
+
+### Web Security Concepts
+
+#### 0. Introduction
+
+- OWASP top 10
+
+#### 1. Authentication & Authorization
+
+- passwords & hashing
+- multi-factor authentication (MFA)
+- OAuth, OpenID Connect
+- JWT (JSON Web Tokens)
+- session management & cookies
+- single sign-on (SSO)
+- access control (role-based, attribute-based)
+- token expiration & refresh
+- passwordless authentication
+
+#### 2. Input & Data Validation
+
+- input validation (server & client)
+- output encoding/escaping
+- sanitization of user input
+- validation against schema (e.g., JSON schema)
+- strict typing & type checking
+
+#### 3. Cross-Site Attacks
+
+- XSS (reflected, stored, DOM-based)
+- CSRF (Cross-Site Request Forgery)
+- clickjacking & UI redress attacks
+- HTTP header attacks (`X-Frame-Options`, `Content-Security-Policy`)
+
+#### 4. Injection Attacks
+
+- SQL injection
+- NoSQL injection
+- command injection
+- LDAP injection
+- template injection (server-side & client-side)
+
+#### 5. Transport & Network Security
+
+- HTTPS / TLS / SSL
+- HSTS (HTTP Strict Transport Security)
+- secure cookies (`HttpOnly`, `Secure`, `SameSite`)
+- certificate pinning
+- CORS (Cross-Origin Resource Sharing)
+- DNS spoofing & hijacking
+- man-in-the-middle (MITM) attacks
+
+#### 6. Data Security
+
+- encryption (at rest & in transit)
+- symmetric vs asymmetric cryptography
+- hashing & salting
+- key management
+- secure storage in browser (localStorage, sessionStorage, cookies)
+
+#### 7. Application & Server Security
+
+- rate limiting & throttling
+- brute force protection
+- input/output logging & monitoring
+- secure headers (`Content-Security-Policy`, `Referrer-Policy`, `X-Content-Type-Options`)
+- server misconfiguration prevention
+- dependency and supply-chain security
+- CORS misconfigurations
+
+#### 8. Error Handling & Logging
+
+- avoid leaking sensitive information in errors
+- logging without exposing secrets
+- monitoring & alerting for unusual activity
+
+#### 9. Session & State Management
+
+- session hijacking & fixation prevention
+- token invalidation on logout
+- short-lived vs long-lived tokens
+- refresh token rotation
+
+#### 10. Content & Browser Security
+
+- Content Security Policy (CSP)
+- Subresource Integrity (SRI)
+- sandboxed iframes
+- secure file uploads (type, size, scanning)
+- preventing open redirects
+
+#### 11. Advanced & Emerging Threats
+
+- SSRF (Server-Side Request Forgery)
+- RCE (Remote Code Execution)
+- clickjacking advanced variants
+- side-channel attacks
+- web sockets & real-time communication security
+- API security (rate limiting, auth, input validation)
+
+#### 12. Testing & Auditing
+
+- penetration testing
+- vulnerability scanning
+- static & dynamic analysis
+- bug bounty programs
+- security headers testing
+- automated CI/CD security checks
+
+#### 13. Regulatory & Compliance
+
+- GDPR, CCPA
+- PCI-DSS (for payment data)
+- HIPAA (for health data)
+- ISO/IEC 27001 standards
