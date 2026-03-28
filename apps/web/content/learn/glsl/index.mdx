@@ -1,3 +1,140 @@
 ---
 title: "GLSL :: Overview"
 ---
+
+# concepts
+
+## 1. fundamentals
+
+- what is glsl
+- shader types (vertex, fragment)
+- how shaders run on the gpu
+- glsl syntax basics
+- data types (float, int, bool, vec2, vec3, vec4, mat2, mat3, mat4)
+- variables & constants
+- precision qualifiers (lowp, mediump, highp)
+
+## 2. inputs & outputs
+
+- attributes (vertex input)
+- uniforms (global input)
+- varyings (data passed between shaders)
+- in / out (modern glsl)
+- interpolation basics
+
+## 3. math essentials
+
+- vector operations (add, subtract, multiply)
+- dot product
+- cross product
+- normalization
+- matrix operations
+- transformations (basic usage)
+
+## 4. fragment shader basics
+
+- gl_FragCoord
+- gl_FragColor / output variables
+- coordinate systems (uv space, screen space)
+- colors (rgb, rgba)
+- drawing simple shapes (circles, rectangles)
+
+## 5. control flow
+
+- if / else
+- loops (for, while)
+- break / continue
+- performance considerations in branching
+
+## 6. functions
+
+- defining functions
+- built-in functions (mix, clamp, step, smoothstep)
+- reusable shader logic
+
+## 7. textures
+
+- texture samplers
+- texture2D / texture
+- uv mapping
+- texture filtering basics
+
+## 8. interpolation & gradients
+
+- smoothstep
+- mix (linear interpolation / lerp)
+- gradients
+- anti-aliasing basics in shaders
+
+## 9. lighting basics
+
+- normals
+- light direction
+- diffuse lighting
+- specular highlights (basic)
+
+## 10. coordinate manipulation
+
+- transforming uv coordinates
+- rotation, scaling, translation in shaders
+- tiling & repeating patterns
+
+## 11. procedural patterns
+
+- grids, stripes, circles
+- noise basics (value noise, perlin/simplex intro)
+- randomness (pseudo-random functions)
+
+## 12. animation
+
+- time uniform
+- oscillation (sin, cos)
+- looping animations
+- transforming over time
+
+## 13. advanced textures & effects
+
+- multi-texturing
+- blending textures
+- displacement mapping
+- normal mapping (intro)
+
+## 14. post-processing
+
+- screen-space effects
+- blur (box, gaussian)
+- edge detection
+- color correction
+
+## 15. performance & optimization
+
+- minimizing branching
+- reducing texture lookups
+- precision trade-offs
+- avoiding expensive operations
+
+## 16. debugging & mental models
+
+- visual debugging (output values as colors)
+- breaking shaders into parts
+- common shader bugs
+
+## 17. advanced topics
+
+- signed distance functions (sdf)
+- ray marching basics
+- physically based rendering (pbr intro)
+- hdr & tone mapping
+
+## mental model (core idea)
+
+- input data → vertex shader → interpolation → fragment shader → pixels
+
+## how to approach
+
+- start with fragment shaders → fastest visual feedback
+- learn by drawing shapes, not reading theory
+- treat shaders as **math + pixels**, not traditional programming
+- experiment constantly
+
+this roadmap aligns directly with your webgl roadmap, so both will reinforce each other
