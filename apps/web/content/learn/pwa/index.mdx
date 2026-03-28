@@ -1,3 +1,125 @@
 ---
 title: "PWA :: Overview"
 ---
+
+# concepts
+
+## 1. fundamentals
+
+- what is a Progressive Web App (PWA)
+- benefits of PWAs (offline, installable, fast)
+- service workers overview
+- manifest file overview
+- browser support & limitations
+
+## 2. setup & basics
+
+- creating a basic web app
+- linking a manifest.json
+- adding icons, name, short_name, start_url
+- configuring theme_color and background_color
+- registering a service worker
+
+## 3. caching strategies
+
+- cache-first vs network-first
+- stale-while-revalidate
+- runtime caching
+- precaching assets
+- workbox basics
+
+## 4. service workers deep dive
+
+- lifecycle of service workers (install, activate, fetch)
+- event listeners (install, activate, fetch, message)
+- skipWaiting & clients.claim
+- push notifications basics
+- background sync basics
+
+## 5. offline support
+
+- detecting offline mode
+- caching API responses
+- handling offline fallback pages
+- dynamic vs static caching
+
+## 6. app manifest
+
+- icons & splash screens
+- display modes (standalone, minimal-ui, fullscreen)
+- orientation lock
+- start_url & scope
+- shortcuts
+
+## 7. performance & optimization
+
+- lazy loading assets
+- efficient caching
+- code splitting
+- reducing network requests
+- using service worker for performance
+
+## 8. notifications & messaging
+
+- push notifications
+- subscription management
+- integrating with Firebase Cloud Messaging (optional)
+- user permission handling
+
+## 9. security & HTTPS
+
+- service workers require HTTPS
+- securing APIs
+- handling mixed content
+- content security policy (CSP)
+
+## 10. advanced service worker techniques
+
+- cache versioning
+- updating assets on new deploy
+- runtime API caching patterns
+- stale-while-revalidate implementation
+- background sync advanced usage
+
+## 11. progressive enhancements
+
+- add to home screen prompt
+- splash screen customization
+- app-like navigation (single-page navigation patterns)
+- smooth transitions & offline UX
+
+## 12. testing & debugging
+
+- lighthouse audits
+- service worker debugging (chrome devtools)
+- offline simulation
+- manifest validation
+- performance profiling
+
+## 13. frameworks & libraries
+
+- PWA plugins (vite, webpack, next.js)
+- workbox integration
+- pwa-builder
+- using React / Vue / Svelte with PWA
+
+## 14. deployment & updates
+
+- hosting on HTTPS (vercel, netlify, cloudflare)
+- handling service worker updates
+- cache invalidation strategies
+- notifying users of new versions
+
+## 15. monitoring & analytics
+
+- tracking installs & usage
+- error reporting offline
+- offline analytics strategies
+
+## 16. patterns & best practices
+
+- fallback pages
+- caching only what’s needed
+- minimizing bundle size
+- reliable offline experience
+- handling slow networks
