@@ -1,3 +1,84 @@
 ---
 title: "Open Graph :: Overview"
 ---
+
+# concepts
+
+## 1. fundamentals
+
+- what is Open Graph (OG)
+- purpose: social media previews & rich sharing
+- how it differs from meta tags
+- common OG properties (`og:title`, `og:description`, `og:image`)
+
+## 2. basic structure
+
+- `<meta>` tags in `<head>`
+- `og:title`, `og:type`, `og:url`, `og:image`, `og:description`
+- optional tags: `og:site_name`, `og:locale`, `og:video`, `og:audio`
+- defining a basic page preview
+
+## 3. content types
+
+- website
+- article
+- video.movie / video.episode / video.tv_show / video.other
+- music.song / music.album / music.playlist / music.radio_station
+- profile (person)
+- product
+
+## 4. images & media
+
+- image requirements (size, aspect ratio, format)
+- multiple images
+- video embedding (mp4, ogg)
+- audio embedding
+- preview quality considerations
+
+## 5. advanced metadata
+
+- `og:locale` for internationalization
+- `og:updated_time` for dynamic content
+- custom tags and namespaces
+- integration with Twitter Cards (twitter:card)
+
+## 6. dynamic generation
+
+- generating OG tags server-side
+- Next.js / React dynamic pages
+- hydration considerations
+- fallback values for missing content
+
+## 7. debugging & validation
+
+- Facebook Sharing Debugger
+- LinkedIn Post Inspector
+- Twitter Card Validator
+- common mistakes (wrong image size, missing required tags)
+
+## 8. SEO & social best practices
+
+- using OG alongside JSON-LD
+- choosing compelling titles & descriptions
+- using high-quality images
+- keeping meta consistent across platforms
+
+## 9. integration patterns
+
+- CMS integration (WordPress, Sanity, Contentful)
+- automated OG generation for blog posts
+- default site-wide OG tags
+- per-page overrides
+
+## 10. performance & caching
+
+- caching OG images for social platforms
+- CDN considerations
+- updating OG tags after content changes
+
+## 11. advanced use cases
+
+- video preview optimization
+- product pages with multiple images
+- multi-locale support
+- combining OG with rich embeds (schema + OG)
