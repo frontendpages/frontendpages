@@ -17,6 +17,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/learn/js/:path*",
+        destination: "/learn/javascript/:path*",
+        permanent: true,
+      },
+      {
+        source: "/learn/ts/:path*",
+        destination: "/learn/typescript/:path*",
+        permanent: true,
+      },
+      {
         source: "/learn/a11y/:path*",
         destination: "/learn/accessibility/:path*",
         permanent: true,
