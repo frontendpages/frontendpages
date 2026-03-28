@@ -1,3 +1,169 @@
 ---
 title: "Three.js :: Overview"
 ---
+
+# concepts
+
+## 1. fundamentals
+
+- what is three.js
+- how three.js abstracts webgl
+- scene, camera, renderer
+- render loop (animation loop)
+- canvas & renderer setup
+- basic project setup
+
+## 2. first render
+
+- creating a scene
+- perspective camera
+- webgl renderer
+- mesh (geometry + material)
+- rendering a cube (hello world)
+- handling resize & pixel ratio
+
+## 3. core objects
+
+- scene graph (parent → child relationships)
+- meshes
+- groups
+- object3d basics (position, rotation, scale)
+- transformations
+
+## 4. cameras
+
+- perspective camera
+- orthographic camera
+- camera controls (orbitcontrols)
+- lookAt
+- camera movement
+
+## 5. geometries
+
+- built-in geometries (box, sphere, plane, etc.)
+- buffergeometry
+- custom geometry basics
+- attributes (position, normal, uv)
+
+## 6. materials
+
+- basic materials (meshbasicmaterial)
+- standard materials (meshstandardmaterial)
+- physical materials (meshphysicalmaterial)
+- wireframe & depth materials
+- material properties
+
+## 7. lighting
+
+- ambient light
+- directional light
+- point light
+- spot light
+- shadows (enable, configure)
+- light helpers
+
+## 8. textures
+
+- texture loader
+- uv mapping
+- texture properties (wrap, repeat, filter)
+- mipmaps
+- environment maps (cube textures)
+
+## 9. rendering pipeline control
+
+- renderer settings
+- tone mapping
+- output encoding
+- gamma correction
+- shadow maps
+
+## 10. animation
+
+- requestAnimationFrame loop
+- clock & delta time
+- basic transformations over time
+- animation mixer (keyframe animations)
+- easing & interpolation
+
+## 11. interaction
+
+- raycasting
+- mouse & pointer events
+- object selection
+- hover & click interactions
+
+## 12. controls & helpers
+
+- orbitcontrols
+- flycontrols / pointerlockcontrols
+- axeshelper
+- gridhelper
+
+## 13. models & assets
+
+- gltf loader
+- loading external models
+- draco compression (optional)
+- asset management
+- async loading patterns
+
+## 14. post-processing
+
+- effectcomposer
+- render passes
+- bloom
+- blur
+- depth of field
+- custom passes
+
+## 15. shaders & customization
+
+- shaderMaterial
+- rawShaderMaterial
+- uniforms in three.js
+- integrating glsl
+- modifying built-in materials (onBeforeCompile)
+
+## 16. advanced rendering
+
+- render targets
+- multiple scenes
+- reflections & refractions
+- environment lighting (ibl)
+
+## 17. performance & optimization
+
+- draw calls optimization
+- instancing (instancedmesh)
+- level of detail (lod)
+- frustum culling
+- texture optimization
+
+## 18. debugging & tooling
+
+- stats.js
+- three.js inspector
+- visual helpers
+- debugging scene graph
+
+## 19. integration & responsiveness
+
+- responsive canvas
+- handling resize
+- device pixel ratio
+- integrating with frameworks (react, etc.)
+
+## 20. patterns & architecture
+
+- structuring three.js projects
+- separating logic (scene, renderer, controls)
+- reusable components
+- managing state
+
+## 21. limitations & next step
+
+- limitations of three.js
+- when to use raw webgl
+- shaders ([glsl](/learn/glsl))
+- introduction to webgpu
