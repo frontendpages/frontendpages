@@ -1,3 +1,174 @@
 ---
 title: "React Three Fiber :: Overview"
 ---
+
+# concepts
+
+## 1. fundamentals
+
+- what is react three fiber
+- how it differs from three.js
+- react renderer for three.js
+- canvas component
+- declarative vs imperative rendering
+- basic project setup
+
+## 2. first render
+
+- creating a canvas
+- adding a mesh
+- geometry + material in jsx
+- perspective camera
+- render loop basics
+
+## 3. core concepts
+
+- jsx for 3d objects
+- scene graph in react
+- components for 3d objects
+- props for position, rotation, scale
+- grouping elements
+
+## 4. hooks
+
+- useFrame (animation loop)
+- useThree (access renderer, camera, scene)
+- useRef for objects
+- lifecycle in r3f
+
+## 5. cameras & controls
+
+- default camera
+- custom camera
+- orbitcontrols (via drei)
+- camera movement
+- lookAt
+
+## 6. geometries
+
+- built-in geometries
+- buffergeometry
+- custom geometry
+- attributes (position, normal, uv)
+
+## 7. materials
+
+- meshBasicMaterial
+- meshStandardMaterial
+- meshPhysicalMaterial
+- material props
+- dynamic material updates
+
+## 8. lighting
+
+- ambient light
+- directional light
+- point light
+- spot light
+- shadows setup
+- light helpers
+
+## 9. textures
+
+- useTexture (drei)
+- loading textures
+- uv mapping basics
+- texture configuration
+- environment maps
+
+## 10. animation
+
+- useFrame for updates
+- clock & delta
+- react state + animation
+- spring animations (react-spring / drei)
+- keyframe animations
+
+## 11. interaction
+
+- pointer events (onClick, onPointerOver)
+- raycasting (built-in)
+- hover & selection
+- gestures (react-use-gesture / drei)
+
+## 12. drei utilities
+
+- orbitcontrols
+- environment
+- sky
+- helpers (axes, grid)
+- loaders
+- abstractions for common patterns
+
+## 13. models & assets
+
+- useGLTF
+- loading gltf models
+- draco compression
+- preloading assets
+- async patterns with suspense
+
+## 14. post-processing
+
+- effectComposer (via drei/postprocessing)
+- bloom
+- blur
+- depth of field
+- custom effects
+
+## 15. shaders & customization
+
+- shaderMaterial (drei)
+- custom shaders (glsl)
+- uniforms in r3f
+- extending three.js materials
+- onBeforeCompile usage
+
+## 16. advanced rendering
+
+- render targets
+- multiple scenes
+- reflections & refractions
+- environment lighting (ibl)
+
+## 17. performance & optimization
+
+- instancing (Instances, InstancedMesh)
+- reducing re-renders
+- memoization (useMemo, useCallback)
+- lod (level of detail)
+- performance monitoring
+
+## 18. debugging & tooling
+
+- stats (drei)
+- visual helpers
+- debugging scene graph
+- react devtools + r3f
+
+## 19. integration & architecture
+
+- structuring r3f projects
+- separating logic into components
+- managing state (zustand, jotai)
+- integrating with ui (react dom)
+
+## 20. responsiveness & layout
+
+- responsive canvas
+- viewport & size handling
+- device pixel ratio
+- adaptive rendering
+
+## 21. patterns & ecosystem
+
+- reusable components
+- composition patterns
+- abstraction layers
+- combining three.js + r3f
+
+## 22. limitations & next step
+
+- limitations of r3f
+- when to drop to three.js
+- introduction to webgpu
