@@ -1,3 +1,99 @@
 ---
 title: "JSON-LD :: Overview"
 ---
+
+# concepts
+
+## 1. fundamentals
+
+- what is JSON-LD
+- difference between JSON, microdata, and RDFa
+- purpose: structured data for machines
+- vocabularies & ontologies (schema.org basics)
+- context (`@context`) overview
+
+## 2. basic structure
+
+- JSON-LD syntax
+- `@context` and `@type`
+- defining simple entities (Person, Organization, Product)
+- embedding JSON-LD in HTML (`<script type="application/ld+json">`)
+
+## 3. common types
+
+- Person
+- Organization
+- WebSite
+- WebPage
+- Article / BlogPosting
+- Event
+- Product
+- Recipe
+- FAQPage
+
+## 4. relationships
+
+- nested objects
+- linking entities with `@id`
+- referencing other types
+- multiple types (`@type` array)
+- sameAs property for external links
+
+## 5. advanced properties
+
+- date properties (`datePublished`, `dateModified`)
+- geo coordinates (`GeoCoordinates`, `GeoShape`)
+- opening hours (`OpeningHoursSpecification`)
+- aggregate ratings (`AggregateRating`)
+- reviews (`Review` type)
+
+## 6. SEO integration
+
+- where to place JSON-LD in HTML
+- multiple scripts per page
+- validating with Google Structured Data Testing Tool
+- schema.org best practices
+- enhancing rich results in search
+
+## 7. dynamic JSON-LD
+
+- generating JSON-LD dynamically in JavaScript
+- server-side rendering vs client-side rendering
+- Next.js / React integration examples
+- hydration considerations
+
+## 8. linked data & external vocabularies
+
+- referencing external contexts
+- using custom `@context`
+- combining multiple vocabularies
+- interoperability with RDF & SPARQL
+
+## 9. error handling & validation
+
+- common mistakes (invalid types, missing context)
+- JSON syntax validation
+- using validators & linters
+- debugging tools (Rich Results Test, Schema Markup Validator)
+
+## 10. advanced patterns
+
+- breadcrumbs (`BreadcrumbList`)
+- videos (`VideoObject`)
+- FAQs (`FAQPage`)
+- products with offers
+- events with location & attendance
+
+## 11. deployment & monitoring
+
+- checking structured data in production
+- monitoring Google Search Console for errors
+- updating JSON-LD with content changes
+- automated generation for dynamic content
+
+## 12. best practices
+
+- keep JSON-LD accurate & up-to-date
+- avoid duplication
+- use schema.org recommended properties
+- balance detail with maintainability
