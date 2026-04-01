@@ -20,6 +20,7 @@
     "react-three-fiber",
     "pwa",
     "json-ld",
-    "open-graph"
+    "open-graph",
+    "pretext"
   ]
 }
