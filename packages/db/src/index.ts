@@ -1,30 +1,25 @@
+import { upstashCache } from "drizzle-orm/cache/upstash";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 import "server-only";
+import { env } from "../env";
 import * as schema from "./schema";
 
-interface CloudflareEnv {
-  HYPERDRIVE: Hyperdrive;
-}
+const globalForDb = globalThis as unknown as {
+  client: postgres.Sql | undefined;
+};
 
-export function getDb(cloudflareEnv: CloudflareEnv) {
-  const globalDb = globalThis as unknown as {
-    conn: postgres.Sql | undefined;
-  };
+const client = globalForDb.client ?? postgres(env().DATABASE_URL, { prepare: false });
 
-  const client =
-    globalDb.conn ??
-    postgres(cloudflareEnv.HYPERDRIVE.connectionString, {
-      prepare: false,
-      max: 5,
-      fetch_types: false,
-    });
+if (process.env.VERCEL_ENV !== "production") globalForDb.client = client;
 
-  if (process.env.NODE_ENV !== "production") globalDb.conn = client;
+export const db = drizzle(client, {
+  schema,
+  cache: upstashCache({
+    url: env().UPSTASH_REDIS_REST_URL,
+    token: env().UPSTASH_REDIS_REST_TOKEN,
+  }),
+  casing: "snake_case",
+});
 
-  const db = drizzle(client, { schema, casing: "snake_case" });
-
-  return db;
-}
-
-export type DB = ReturnType<typeof getDb>;
+export type DB = typeof db;

@@ -1,16 +1,5 @@
 {
   "extends": "@repo/typescript-config/app/no-dom",
-  "compilerOptions": {
-    "types": [
-      "@types/node",
-      "@cloudflare/workers-types"
-    ]
-  },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

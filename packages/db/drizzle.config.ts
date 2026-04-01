@@ -8,7 +8,5 @@ export default defineConfig({
   casing: "snake_case",
   dbCredentials: {
     url: env().DATABASE_URL,
-    ssl: process.env.NODE_ENV === "production" ? "require" : undefined,
   },
-  strict: true,
 });
