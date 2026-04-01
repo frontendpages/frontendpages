@@ -27,6 +27,7 @@ export const auth = betterAuth({
   baseURL: {
     allowedHosts: [
       "frontendpages.com", // Production
+      "dev.frontendpages.com", // Preview / Dev
       "*.vercel.app", // All Vercel previews
       "localhost:3000", // Local development
     ],
