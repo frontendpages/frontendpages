@@ -30,6 +30,9 @@ catalogs:
     '@types/react-dom':
       specifier: ^19.2.3
       version: 19.2.3
+    better-auth:
+      specifier: 1.5.5
+      version: 1.5.5
     drizzle-orm:
       specifier: 0.44.7
       version: 0.44.7
@@ -107,6 +110,9 @@ importers:
       '@repo/analytics':
         specifier: workspace:*
         version: link:../../packages/analytics
+      '@repo/auth':
+        specifier: workspace:*
+        version: link:../../packages/auth
       '@repo/fonts':
         specifier: workspace:*
         version: link:../../packages/design-system/fonts
@@ -125,6 +131,9 @@ importers:
       '@takumi-rs/image-response':
         specifier: ^0.71.7
         version: 0.71.7
+      better-auth:
+        specifier: 'catalog:'
+        version: 1.5.5(@cloudflare/workers-types@4.20260312.1)(drizzle-kit@0.31.10)(drizzle-orm@0.44.7(@cloudflare/workers-types@4.20260312.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(@upstash/redis@1.37.0)(kysely@0.28.11)(postgres@3.4.8))(mongodb@7.1.0)(next@16.2.0(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       fumadocs-core:
         specifier: ^16.6.17
         version: 16.6.17(@mdx-js/mdx@3.1.1)(@types/estree-jsx@1.0.5)(@types/hast@3.0.4)(@types/mdast@4.0.4)(@types/react@19.2.14)(lucide-react@0.577.0(react@19.2.4))(next@16.2.0(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(zod@4.1.13)
@@ -224,49 +233,6 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../tooling/typescript-config
-      typescript:
-        specifier: 'catalog:'
-        version: 5.9.3
-
-  packages/api:
-    dependencies:
-      '@orpc/server':
-        specifier: 'catalog:'
-        version: 1.13.6(@opentelemetry/api@1.9.0)(ws@8.18.3)
-      '@repo/auth':
-        specifier: workspace:*
-        version: link:../auth
-      '@repo/db':
-        specifier: workspace:*
-        version: link:../db
-      drizzle-orm:
-        specifier: 'catalog:'
-        version: 0.44.7(@cloudflare/workers-types@4.20260312.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(@upstash/redis@1.37.0)(kysely@0.28.11)(postgres@3.4.8)
-      server-only:
-        specifier: 'catalog:'
-        version: 0.0.1
-      zod:
-        specifier: 'catalog:'
-        version: 4.1.13
-    devDependencies:
-      '@cloudflare/workers-types':
-        specifier: 'catalog:'
-        version: 4.20260312.1
-      '@repo/eslint-config':
-        specifier: workspace:*
-        version: link:../../tooling/eslint-config
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../../tooling/typescript-config
-      '@types/node':
-        specifier: 'catalog:'
-        version: 24.12.0
-      eslint:
-        specifier: 'catalog:'
-        version: 9.39.4(jiti@2.6.1)
-      eslint-plugin-drizzle:
-        specifier: ^0.2.3
-        version: 0.2.3(eslint@9.39.4(jiti@2.6.1))
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -514,6 +480,49 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../tooling/typescript-config
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+
+  packages/rpc:
+    dependencies:
+      '@orpc/server':
+        specifier: 'catalog:'
+        version: 1.13.6(@opentelemetry/api@1.9.0)(ws@8.18.3)
+      '@repo/auth':
+        specifier: workspace:*
+        version: link:../auth
+      '@repo/db':
+        specifier: workspace:*
+        version: link:../db
+      drizzle-orm:
+        specifier: 'catalog:'
+        version: 0.44.7(@cloudflare/workers-types@4.20260312.1)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(@upstash/redis@1.37.0)(kysely@0.28.11)(postgres@3.4.8)
+      server-only:
+        specifier: 'catalog:'
+        version: 0.0.1
+      zod:
+        specifier: 'catalog:'
+        version: 4.1.13
+    devDependencies:
+      '@cloudflare/workers-types':
+        specifier: 'catalog:'
+        version: 4.20260312.1
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint-config
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../tooling/typescript-config
+      '@types/node':
+        specifier: 'catalog:'
+        version: 24.12.0
+      eslint:
+        specifier: 'catalog:'
+        version: 9.39.4(jiti@2.6.1)
+      eslint-plugin-drizzle:
+        specifier: ^0.2.3
+        version: 0.2.3(eslint@9.39.4(jiti@2.6.1))
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -7810,7 +7819,7 @@ snapshots:
       '@better-auth/utils': 0.3.1
       '@better-fetch/fetch': 1.1.21
       '@standard-schema/spec': 1.1.0
-      better-call: 1.3.2(zod@4.3.6)
+      better-call: 1.3.2(zod@4.1.13)
       jose: 6.2.1
       kysely: 0.28.11
       nanostores: 1.1.1
@@ -11264,7 +11273,7 @@ snapshots:
       '@better-fetch/fetch': 1.1.21
       '@noble/ciphers': 2.1.1
       '@noble/hashes': 2.0.1
-      better-call: 1.3.2(zod@4.3.6)
+      better-call: 1.3.2(zod@4.1.13)
       defu: 6.1.4
       jose: 6.2.1
       kysely: 0.28.11
@@ -11279,6 +11288,15 @@ snapshots:
       react-dom: 19.2.4(react@19.2.4)
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
+
+  better-call@1.3.2(zod@4.1.13):
+    dependencies:
+      '@better-auth/utils': 0.3.1
+      '@better-fetch/fetch': 1.1.21
+      rou3: 0.7.12
+      set-cookie-parser: 3.0.1
+    optionalDependencies:
+      zod: 4.1.13
 
   better-call@1.3.2(zod@4.3.6):
     dependencies:

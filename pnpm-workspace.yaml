@@ -7,30 +7,30 @@ packages:
 blockExoticSubdeps: true
 
 catalog:
-  "@cloudflare/workers-types": ^4.20260312.1
-  "@t3-oss/env-nextjs": ^0.13.10
-  "@types/node": ^24.12.0
-  "@types/react": ^19.2.14
-  "@types/react-dom": ^19.2.3
-  eslint: ^9.38.0
-  tailwindcss: ^4.1.17
-  tsdown: ^0.15.12
-  typescript: ^5.9.3
-  server-only: ^0.0.1
-  "@orpc/client": 1.13.6
-  "@orpc/server": 1.13.6
-  "@orpc/tanstack-query": 1.13.6
-  "@polar-sh/better-auth": 1.8.2
-  "@sentry/nextjs": 10.43.0
+  '@cloudflare/workers-types': ^4.20260312.1
+  '@orpc/client': 1.13.6
+  '@orpc/server': 1.13.6
+  '@orpc/tanstack-query': 1.13.6
+  '@polar-sh/better-auth': 1.8.2
+  '@sentry/nextjs': 10.43.0
+  '@t3-oss/env-nextjs': ^0.13.10
+  '@types/node': ^24.12.0
+  '@types/react': ^19.2.14
+  '@types/react-dom': ^19.2.3
   better-auth: 1.5.5
   drizzle-orm: 0.44.7
+  eslint: ^9.38.0
   next: 16.2.0
   react: 19.2.4
   react-dom: 19.2.4
+  server-only: ^0.0.1
+  tailwindcss: ^4.1.17
+  tsdown: ^0.15.12
+  typescript: ^5.9.3
   zod: 4.1.13
 
 onlyBuiltDependencies:
-  - "@sentry/cli"
+  - '@sentry/cli'
   - core-js
   - esbuild
   - lefthook
