@@ -15,7 +15,8 @@
     "@better-auth/passkey": "^1.5.5",
     "@polar-sh/better-auth": "catalog:",
     "@repo/db": "workspace:*",
-    "@repo/payments": "workspace:*"
+    "@repo/payments": "workspace:*",
+    "@repo/rate-limit": "workspace:*"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "catalog:",

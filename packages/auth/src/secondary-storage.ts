@@ -1,14 +1,14 @@
-import type { SecondaryStorage } from "better-auth/db";
-import type { CloudflareEnv } from "./server";
+import { redis as client } from "@repo/rate-limit";
+import type { SecondaryStorage } from "better-auth";
 
-export function secondaryStorage(cloudflareEnv: CloudflareEnv): SecondaryStorage | undefined {
-  if (!cloudflareEnv.AUTH_CACHE) return undefined;
-
-  const { get: KV_GET, put: KV_SET, delete: KV_DELETE } = cloudflareEnv.AUTH_CACHE;
+export function secondaryStorage(): SecondaryStorage | undefined {
+  if (!client) {
+    return undefined;
+  }
 
   return {
     get: async (key) => {
-      const value = (await KV_GET<string | null>(key)) ?? null;
+      const value = (await client.get<string | null>(key)) ?? null;
 
       if (typeof value === "string") {
         return value;
@@ -16,17 +16,15 @@ export function secondaryStorage(cloudflareEnv: CloudflareEnv): SecondaryStorage
 
       return value ? JSON.stringify(value) : null;
     },
-
     set: async (key, value, ttl) => {
       if (ttl) {
-        await KV_SET(key, value, { expiration: ttl });
+        await client.set(key, value, { ex: ttl });
       } else {
-        await KV_SET(key, value);
+        await client.set(key, value);
       }
     },
-
     delete: async (key) => {
-      await KV_DELETE(key);
+      await client.del(key);
     },
   };
 }
