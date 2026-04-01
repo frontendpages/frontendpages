@@ -21,6 +21,7 @@
     "@repo/seo": "workspace:*",
     "@repo/tokens": "workspace:*",
     "@repo/ui": "workspace:*",
+    "@rescale/nemo": "^2.2.0",
     "@takumi-rs/image-response": "^0.71.7",
     "better-auth": "catalog:",
     "fumadocs-core": "^16.6.17",
