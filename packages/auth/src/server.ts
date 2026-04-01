@@ -24,6 +24,13 @@ export const auth = betterAuth({
     polar(polarOptions),
   ],
 
+  baseURL: {
+    allowedHosts: [
+      "frontendpages.com", // Production
+      "*.vercel.app", // All Vercel previews
+      "localhost:3000", // Local development
+    ],
+  },
   advanced: {
     cookiePrefix: "frontendpages",
     useSecureCookies: true,
