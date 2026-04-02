@@ -12,7 +12,7 @@ export const createRateLimiter = (props: Omit<RatelimitConfig, "redis">) =>
   new Ratelimit({
     redis,
     limiter: props.limiter ?? Ratelimit.slidingWindow(10, "10 s"),
-    prefix: props.prefix ?? "next-forge",
+    prefix: props.prefix ?? "frontendpages",
   });
 
 export const { slidingWindow } = Ratelimit;
