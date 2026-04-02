@@ -1,4 +1,4 @@
-import { defaults } from "@nosecone/next";
+import { defaults, withVercelToolbar } from "@nosecone/next";
 import type { Options as NoseconeOptions } from "@nosecone/next";
 import { env } from "../env";
 
@@ -45,5 +45,8 @@ export const securityHeadersOptions: NoseconeOptions = {
   },
   crossOriginEmbedderPolicy: { policy: "credentialless" },
 };
+
+export const securityHeadersOptionsWithVercelToolbar: NoseconeOptions =
+  withVercelToolbar(securityHeadersOptions);
 
 export { createMiddleware as securityHeadersMiddleware } from "@nosecone/next";

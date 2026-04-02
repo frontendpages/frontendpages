@@ -1,12 +1,21 @@
 import { NextResponse } from "next/server";
 import { createNEMO } from "@rescale/nemo";
 import { getSessionCookie } from "better-auth/cookies";
-import { securityHeadersMiddleware, securityHeadersOptions } from "@repo/security/security-headers";
+import {
+  securityHeadersMiddleware,
+  securityHeadersOptions,
+  securityHeadersOptionsWithVercelToolbar,
+} from "@repo/security/security-headers";
 import type { MiddlewareConfig } from "@rescale/nemo";
 import type { NextRequest } from "next/server";
 
+const securityHeaders =
+  process.env.VERCEL_ENV === "preview"
+    ? securityHeadersMiddleware(securityHeadersOptionsWithVercelToolbar)
+    : securityHeadersMiddleware(securityHeadersOptions);
+
 const middlewares = {
-  "/:path*": [securityHeadersMiddleware(securityHeadersOptions)],
+  "/:path*": [securityHeaders],
   "/playground": [
     async (request: NextRequest) => {
       const { pathname } = request.nextUrl;
