@@ -1,0 +1,25 @@
+{
+  "name": "@repo/redis",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./rate-limit": "./src/rate-limit.ts",
+    "./env": "./env.ts"
+  },
+  "scripts": {
+    "clean": "rimraf .turbo node_modules",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "catalog:",
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.38.0",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

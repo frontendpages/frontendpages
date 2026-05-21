@@ -1,0 +1,17 @@
+import type { NextConfig } from "next";
+import { withSentry } from "@repo/telemetry/sentry/with-sentry";
+
+const nextConfig: NextConfig = {
+  poweredByHeader: false,
+  reactCompiler: true,
+  cacheComponents: true,
+  typedRoutes: true,
+  transpilePackages: ["@repo/ui"],
+  allowedDevOrigins: ["local.web.vazen.id", "*.local.web.vazen.id"],
+};
+const NextApp = () => {
+  const plugins = [withSentry];
+  return plugins.reduce((config, plugin) => plugin(config), nextConfig);
+};
+
+export default NextApp;

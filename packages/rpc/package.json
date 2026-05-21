@@ -1,0 +1,32 @@
+{
+  "name": "@repo/rpc",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/orpc.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf node_modules .turbo"
+  },
+  "dependencies": {
+    "@repo/auth": "workspace:*",
+    "@repo/db": "workspace:*"
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "@orpc/server": "catalog:orpc",
+    "server-only": "catalog:",
+    "zod": "catalog:"
+  }
+}

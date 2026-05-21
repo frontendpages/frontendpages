@@ -1,0 +1,30 @@
+{
+  "name": "@repo/auth",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./client": "./src/client.ts",
+    "./server": "./src/server.ts"
+  },
+  "scripts": {
+    "clean": "rimraf node_modules .turbo"
+  },
+  "dependencies": {
+    "@better-auth/infra": "catalog:auth",
+    "@repo/db": "workspace:*",
+    "@repo/redis": "workspace:*",
+    "@t3-oss/env-nextjs": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "better-auth": "catalog:auth",
+    "next": "catalog:next",
+    "server-only": "catalog:"
+  }
+}

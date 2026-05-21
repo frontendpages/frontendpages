@@ -1,0 +1,5 @@
+{
+  "extends": "@repo/tsconfig/app/no-dom",
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "ui": "tui",
+  "envMode": "loose",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "e2e": {
+      "dependsOn": ["web#build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["playwright-report/**", "test-results/**"]
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}
