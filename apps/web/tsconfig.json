@@ -1,13 +1,15 @@
 {
   "extends": "@repo/tsconfig/app/dom",
   "compilerOptions": {
+    "baseUrl": ".",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "collections/*": [".source/*"]
     }
   },
   "include": [

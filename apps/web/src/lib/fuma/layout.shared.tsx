@@ -1,0 +1,18 @@
+import { Icons } from "@repo/ui/icons";
+import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+
+export function baseOptions(): BaseLayoutProps {
+  return {
+    nav: {
+      title: (
+        <div className="flex items-center justify-center gap-3">
+          <div className="bg-black p-1.5 text-white dark:bg-white dark:text-black">
+            <Icons.Logo className="size-3" />
+          </div>
+          <p className="font-neutral-sans">Frontend Pages</p>
+        </div>
+      ),
+    },
+    githubUrl: "https://github.com/frontendpages/frontendpages",
+  };
+}

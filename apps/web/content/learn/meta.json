@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "(overview)",
+    "html",
+    "css",
+    "svg",
+    "accessibility",
+    "web-security",
+    "javascript",
+    "typescript",
+    "react",
+    "nextjs",
+    "tailwindcss",
+    "motion",
+    "gsap",
+    "webgl",
+    "glsl",
+    "webgpu",
+    "threejs",
+    "react-three-fiber",
+    "pwa",
+    "json-ld",
+    "open-graph",
+    "pretext"
+  ]
+}

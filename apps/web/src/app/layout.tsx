@@ -13,12 +13,10 @@ export const metadata: Metadata = {
       {
         media: "(prefers-color-scheme: light)",
         url: "/images/favicon-dark.png",
-        href: "/images/favicon-dark.png",
       },
       {
         media: "(prefers-color-scheme: dark)",
         url: "/images/favicon-light.png",
-        href: "/images/favicon-light.png",
       },
     ],
   },
@@ -37,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("antialiased", fontsVariable, "font-sans")}>
-      <body>
+    <html lang="en" className={cn("antialiased", fontsVariable, "font-sans")} suppressHydrationWarning>
+      <body className="flex min-h-screen flex-col">
         <Providers>{children}</Providers>
       </body>
     </html>
