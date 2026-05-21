@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "@repo/ui/button";
-import { Icons } from "@repo/ui/icons";
+import { Button } from "@repo/ui/components/button";
+import { Icons } from "@repo/ui/components/icons";
 
 export default function Page() {
   return (
