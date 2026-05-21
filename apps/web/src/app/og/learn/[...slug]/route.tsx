@@ -3,8 +3,6 @@ import { ImageResponse } from "@takumi-rs/image-response";
 import { generate as DefaultImage } from "fumadocs-ui/og/takumi";
 import { getPageImage, source } from "@/lib/fuma/source";
 
-export const revalidate = false;
-
 export async function GET(_req: Request, { params }: RouteContext<"/og/learn/[...slug]">) {
   const { slug } = await params;
   const page = source.getPage(slug.slice(0, -1));

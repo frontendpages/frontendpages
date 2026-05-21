@@ -6,7 +6,7 @@ const withMDX = createMDX({});
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactCompiler: true,
-  cacheComponents: false,
+  cacheComponents: true,
   typedRoutes: true,
   transpilePackages: ["@repo/ui"],
   serverExternalPackages: ["@takumi-rs/image-response"],

@@ -2,8 +2,6 @@ import { notFound } from "next/navigation";
 import { getLLMText } from "@/lib/fuma/get-llm-text";
 import { source } from "@/lib/fuma/source";
 
-export const revalidate = false;
-
 export async function GET(_req: Request, { params }: RouteContext<"/llms.mdx/learn/[[...slug]]">) {
   const { slug } = await params;
   const page = source.getPage(slug);
