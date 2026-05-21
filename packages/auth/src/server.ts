@@ -12,13 +12,13 @@ function isProduction() {
 }
 
 export const auth = betterAuth({
-  appName: "vazen",
+  appName: "frontendpages",
   baseURL: {
     allowedHosts: [
       "localhost:3000", // Local Host
-      "local.web.vazen.id", // Local development (using portless)
+      "local.web.frontendpages.id", // Local development (using portless)
       "*.vercel.app", // Preview (Vercel)
-      "web.vazen.dev", // Production
+      "frontendpages.com", // Production
     ],
   },
 
@@ -68,7 +68,7 @@ export const auth = betterAuth({
   ],
 
   advanced: {
-    cookiePrefix: "vazen",
+    cookiePrefix: "frontendpages",
     useSecureCookies: isProduction(),
     ipAddress: {
       ipAddressHeaders: ["cf-connecting-ip", "x-forwarded-for"],

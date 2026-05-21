@@ -42,7 +42,7 @@
     "typescript": "catalog:"
   },
   "portless": {
-    "name": "local.web.vazen",
+    "name": "local.web.frontendpages",
     "script": "dev:app"
   }
 }

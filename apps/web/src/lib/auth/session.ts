@@ -16,4 +16,4 @@ export const getServerSession = cache(async () => {
 });
 
 export const getSessionCookie = (request: Parameters<typeof BAGetSessionCookie>[0]) =>
-  BAGetSessionCookie(request, { cookiePrefix: "vazen" });
+  BAGetSessionCookie(request, { cookiePrefix: "frontendpages" });

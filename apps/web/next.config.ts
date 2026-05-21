@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   typedRoutes: true,
   transpilePackages: ["@repo/ui"],
-  allowedDevOrigins: ["local.web.vazen.id", "*.local.web.vazen.id"],
+  allowedDevOrigins: ["local.web.frontendpages.id", "*.local.web.frontendpages.id"],
 };
 const NextApp = () => {
   const plugins = [withSentry];
