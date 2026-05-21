@@ -1,8 +1,7 @@
-import { asul } from "./google/asul";
 import { geist } from "./google/geist";
-import { commitMonoVazen } from "./local/commitmono-vazen";
+import { neutralSans } from "./local/neutral-sans";
 
-const fonts = [geist, asul, commitMonoVazen];
+const fonts = [geist, neutralSans];
 const fontsVariable = fonts.map((font) => font.variable).join(" ");
 
-export { asul, commitMonoVazen, fontsVariable, geist };
+export { fontsVariable, geist, neutralSans };
