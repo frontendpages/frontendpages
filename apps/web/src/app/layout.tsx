@@ -4,9 +4,11 @@ import { LazyMotion, domAnimation } from "motion/react";
 import * as m from "motion/react-m";
 import "@/styles/globals.css";
 import { cn } from "@repo/ui/lib/utils";
-import { Providers } from "./providers";
 import { fontsVariable } from "@repo/ui/fonts";
 import { links, site } from "@repo/config/app";
+import { JsonLd } from "@repo/config/seo";
+import { Providers } from "./providers";
+import { organizationSchema, websiteSchema } from "./ld";
 
 export const metadata: Metadata = {
   metadataBase: new URL(links.base),
@@ -96,6 +98,8 @@ export default function RootLayout({
         <head>
           <link rel="preconnect" href={links.cdn} />
           <link rel="dns-prefetch" href={links.cdn} />
+          <JsonLd code={websiteSchema} />
+          <JsonLd code={organizationSchema} />
         </head>
         <LazyMotion features={domAnimation}>
           <m.div
