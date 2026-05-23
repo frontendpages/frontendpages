@@ -8,11 +8,14 @@ import {
 import type { MiddlewareConfig } from "@rescale/nemo";
 import { getSessionCookie } from "@/lib/auth/session";
 import { getStableId } from "@repo/flags/lib/stable-id";
+import { isMarkdownPreferred, rewritePath } from "fumadocs-core/negotiation";
 
 const securityHeaders =
   process.env.VERCEL_ENV === "preview"
     ? securityHeadersMiddleware(securityHeadersOptionsWithVercelToolbar)
     : securityHeadersMiddleware(securityHeadersOptions);
+
+const { rewrite: rewriteLLM } = rewritePath("/learn{/*path}", "/llms.mdx/learn{/*path}");
 
 const middlewares = {
   "/:path*": [
@@ -53,6 +56,17 @@ const middlewares = {
         return NextResponse.redirect(new URL(`/auth/login?next=${callbackUrl}`, request.url));
       }
 
+      return NextResponse.next();
+    },
+  ],
+  "/learn/:path": [
+    async (request: NextRequest) => {
+      if (isMarkdownPreferred(request)) {
+        const result = rewriteLLM(request.nextUrl.pathname);
+        if (result) {
+          return NextResponse.rewrite(new URL(result, request.nextUrl));
+        }
+      }
       return NextResponse.next();
     },
   ],

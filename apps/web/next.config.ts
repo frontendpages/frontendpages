@@ -19,6 +19,14 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200],
     qualities: [50, 80],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/learn/:path*.md",
+        destination: "/llms.mdx/learn/:path*",
+      },
+    ];
+  },
 };
 
 const NextApp = () => {
