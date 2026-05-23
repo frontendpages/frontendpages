@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "@/lib/orpc/server";
+import { LazyMotion, domAnimation } from "motion/react";
+import * as m from "motion/react-m";
 import "@/styles/globals.css";
 import { cn } from "@repo/ui/lib/utils";
 import { Providers } from "@/app/providers";
@@ -37,7 +39,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("antialiased", fontsVariable, "font-geist")} suppressHydrationWarning>
       <body className="flex min-h-screen flex-col">
-        <Providers>{children}</Providers>
+        <LazyMotion features={domAnimation}>
+          <m.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.23, ease: [0.455, 0.03, 0.515, 0.955] /** inOutQuad */ }}
+          >
+            <Providers>{children}</Providers>
+          </m.div>
+        </LazyMotion>
       </body>
     </html>
   );
