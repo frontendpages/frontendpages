@@ -12,6 +12,7 @@ import { createRelativeLink } from "fumadocs-ui/mdx";
 import type { Metadata } from "next";
 import { getPageImage, source } from "@/lib/fuma/source";
 import { getMDXComponents } from "@/components/mdx";
+import { links } from "@repo/config/app";
 
 export default async function Page(props: PageProps<"/learn/[[...slug]]">) {
   const params = await props.params;
@@ -29,7 +30,7 @@ export default async function Page(props: PageProps<"/learn/[[...slug]]">) {
         <MarkdownCopyButton markdownUrl={`${page.url}.mdx`} />
         <ViewOptionsPopover
           markdownUrl={`${page.url}.mdx`}
-          githubUrl={`https://github.com/frontendpages/frontendpages/blob/main/apps/web/content/learn/${page.path}`}
+          githubUrl={`${links.github}/blob/main/apps/web/content/learn/${page.path}`}
         />
       </div>
       <DocsBody>

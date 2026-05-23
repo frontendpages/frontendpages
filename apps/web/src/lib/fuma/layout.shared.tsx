@@ -1,3 +1,4 @@
+import { links } from "@repo/config/app";
 import { Icons } from "@repo/ui/components/icons";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
@@ -13,6 +14,6 @@ export function baseOptions(): BaseLayoutProps {
         </div>
       ),
     },
-    githubUrl: "https://github.com/frontendpages/frontendpages",
+    githubUrl: links.github,
   };
 }

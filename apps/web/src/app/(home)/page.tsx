@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@repo/ui/components/button";
 import { Icons } from "@repo/ui/components/icons";
+import { links } from "@repo/config/app";
 
 export default function Page() {
   return (
@@ -19,7 +20,7 @@ export default function Page() {
               <Link href="/learn/">
                 <Button>Start Learning</Button>
               </Link>
-              <a target="_blank" href="https://github.com/frontendpages/frontendpages" rel="noreferrer">
+              <a target="_blank" href={links.github} rel="noreferrer">
                 <Button variant={"outline"}>
                   <Icons.GitHub className="size-4" />
                   Contribute
