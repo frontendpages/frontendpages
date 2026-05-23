@@ -1,10 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createNEMO } from "@rescale/nemo";
-import { securityHeadersMiddleware, securityHeadersOptions } from "@repo/security/security-headers";
+import {
+  securityHeadersMiddleware,
+  securityHeadersOptions,
+  securityHeadersOptionsWithVercelToolbar,
+} from "@repo/security/security-headers";
 import type { MiddlewareConfig } from "@rescale/nemo";
 import { getSessionCookie } from "@/lib/auth/session";
 import { getStableId } from "@repo/flags/lib/stable-id";
-const securityHeaders = securityHeadersMiddleware(securityHeadersOptions);
+
+const securityHeaders =
+  process.env.VERCEL_ENV === "preview"
+    ? securityHeadersMiddleware(securityHeadersOptionsWithVercelToolbar)
+    : securityHeadersMiddleware(securityHeadersOptions);
 
 const middlewares = {
   "/:path*": [
