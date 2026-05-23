@@ -4,7 +4,7 @@ import { LazyMotion, domAnimation } from "motion/react";
 import * as m from "motion/react-m";
 import "@/styles/globals.css";
 import { cn } from "@repo/ui/lib/utils";
-import { Providers } from "@/app/providers";
+import { Providers } from "./providers";
 import { fontsVariable } from "@repo/ui/fonts";
 import { links, site } from "@repo/config/app";
 
