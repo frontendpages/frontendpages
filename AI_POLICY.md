@@ -1,62 +1,73 @@
 # AI Usage Policy
 
-At FrontendPages.com, we embrace AI as a productivity tool—but with clear rules to ensure quality, transparency, and accountability.
+The Frontend Pages project has strict rules for AI usage:
 
-## 1. Full Disclosure
+- **All AI usage in any form must be disclosed.** You must state
+  the tool you used (e.g. Claude Code, Cursor, GitHub Copilot, ChatGPT) along with
+  the extent that the work was AI-assisted.
 
-All AI usage must be disclosed. You must state:
+- **Pull requests created in any way by AI can only be for accepted issues.**
+  Drive-by pull requests that do not reference an accepted issue will be
+  closed. If AI isn't disclosed but a maintainer suspects its use, the
+  PR will be closed. If you want to share code for a non-accepted issue,
+  open a discussion or attach it to an existing discussion.
 
-- the AI tool used (e.g., Claude Code, Cursor, Copilet)
-- the extent to which AI assisted your work
+- **Pull requests created by AI must have been fully verified with
+  human use.** AI must not create hypothetically correct code that
+  hasn't been tested. Importantly, you must not allow AI to write
+  code for platforms or environments you don't have access to manually
+  test on.
 
-This ensures everyone reviewing your contributions knows what was human-authored versus AI-assisted.
+- **Issues and discussions can use AI assistance but must have a full
+  human-in-the-loop.** This means that any content generated with AI
+  must have been reviewed _and edited_ by a human before submission.
+  AI is very good at being overly verbose and including noise that
+  distracts from the main point. Humans must do their research and
+  trim this down.
 
-## 2. Human-in-the-Loop
+- **No AI-generated media is allowed (art, images, videos, audio, etc.).**
+  Text and code are the only acceptable AI-generated content, per the
+  other rules in this policy.
 
-Any AI-assisted contribution **must be fully understood by a human**. If you cannot explain what your changes do and how they interact with the broader system without AI help, do not submit it.
+- **Bad AI drivers will be banned and ridiculed in public.** You've
+  been warned. We love to help junior developers learn and grow, but
+  if you're interested in that then don't use AI, and we'll help you.
+  I'm sorry that bad AI drivers have ruined this for you.
 
-Every line of AI-assisted code or content must be reviewed and validated by a human.
+These rules apply only to outside contributions to Frontend Pages. Maintainers
+are exempt from these rules and may use AI tools at their discretion;
+they've proven themselves trustworthy to apply good judgment.
 
-## 3. Issues and Discussions
+## There are Humans Here
 
-AI assistance is allowed for discussions, issues, and drafting content—but only with full human oversight. Humans must:
+Please remember that Frontend Pages is maintained by humans.
 
-- review AI-generated content
-- trim unnecessary verbosity
-- ensure clarity and correctness
+Every discussion, issue, and pull request is read and reviewed by
+humans (and sometimes machines, too). It is a boundary point at which
+people interact with each other and the work done. It is rude and
+disrespectful to approach this boundary with low-effort, unqualified
+work, since it puts the burden of validation on the maintainer.
 
-AI can produce noise; humans must do the editing.
+In a perfect world, AI would produce high-quality, accurate work
+every time. But today, that reality depends on the driver of the AI.
+And today, most drivers of AI are just not good enough. So, until either
+the people get better, the AI gets better, or both, we have to have
+strict rules to protect maintainers.
 
-## 4. Allowed AI Content
+## AI is Welcome Here
 
-- **Permitted:** text and code
-- **Not permitted:** AI-generated media (art, images, videos, audio, etc.)
+Frontend Pages is written with plenty of AI assistance, and many maintainers embrace
+AI tools as a productive tool in their workflow. As a project, we welcome
+AI as a tool!
 
-All AI-generated content must comply with the other rules in this policy.
+**Our reason for the strict AI policy is not due to an anti-AI stance**, but
+instead due to the number of highly unqualified people using AI. It's the
+people, not the tools, that are the problem.
 
-## 5. Accountability
+I include this section to be transparent about the project's usage about
+AI for people who may disagree with it, and to address the misconception
+that this policy is anti-AI in nature.
 
-- Contributions that are clearly low-effort AI-generated work may be flagged.
-- Repeat offenders will be added to a public notice list, which may be referenced by other projects.
-- This is meant to protect the community and maintain quality standards.
+---
 
-Junior developers are welcome to learn and grow—if using AI, they must adhere to these rules.
-
-## 6. Maintainer Exceptions
-
-Maintainers may use AI tools freely. Their judgment has been trusted and proven to uphold quality and project standards.
-
-## 7. Respect for Humans
-
-Every discussion, issue, and pull request is reviewed by humans.
-Submitting low-quality or unqualified work places unnecessary burden on maintainers and is considered disrespectful.
-
-AI tools cannot replace human oversight. Until AI becomes highly reliable, strict rules protect maintainers and contributors alike.
-
-## 8. AI Is Welcome
-
-FrontendPages.com uses AI extensively, and many maintainers incorporate it into their workflows.
-
-This policy is **not anti-AI**. Its purpose is to ensure quality in contributions, because human oversight remains essential.
-
-Transparency about AI use helps the community understand how the project works and addresses misconceptions about AI being discouraged.
+_This policy is adapted from the [Ghostty project's AI Usage Policy](https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md), originally created by [mitchellh](https://github.com/mitchellh) and the Ghostty team. Thanks for setting the standard._
