@@ -25,7 +25,11 @@ export const securityHeadersOptions: NoseconeOptions = {
         "https://*.sentry.io",
       ],
       workerSrc: [...defaults.contentSecurityPolicy.directives.workerSrc, "blob:", "data:"],
-      imgSrc: [...defaults.contentSecurityPolicy.directives.imgSrc, "https://*.posthog.com"],
+      imgSrc: [
+        ...defaults.contentSecurityPolicy.directives.imgSrc,
+        "https://cdn.frontendpages.com",
+        "https://*.posthog.com",
+      ],
       styleSrc: [
         ...defaults.contentSecurityPolicy.directives.styleSrc,
         "https://ogohtsopo.frontendpages.com",
