@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     icon: [
       {
         media: "(prefers-color-scheme: light)",
-        url: "/images/favicon-dark.png",
+        url: "/icons/favicon-dark.png",
       },
       {
         media: "(prefers-color-scheme: dark)",
-        url: "/images/favicon-light.png",
+        url: "/icons/favicon-light.png",
       },
     ],
   },
