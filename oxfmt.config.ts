@@ -2,7 +2,7 @@ import { defineConfig } from "oxfmt";
 
 export default defineConfig({
   semi: true,
-  printWidth: 110,
+  printWidth: 100,
   singleQuote: false,
   trailingComma: "es5",
   bracketSpacing: true,

@@ -13,8 +13,8 @@ export default function Page() {
               The readable web platform documentation
             </h1>
             <p className="max-w-156">
-              Learn the web platform from first principles :: core technologies and frameworks, weird CSS, and
-              advanced rendering with WebGL/WebGPU
+              Learn the web platform from first principles :: core technologies and frameworks,
+              weird CSS, and advanced rendering with WebGL/WebGPU
             </p>
             <div className="flex items-center gap-3">
               <Link href="/learn/">

@@ -34,7 +34,10 @@ export const session = auth.table(
     createdAt: t.timestamp("created_at", { precision: 6, withTimezone: true }).notNull(),
     updatedAt: t.timestamp("updated_at", { precision: 6, withTimezone: true }).notNull(),
   },
-  (table) => [t.index("session_user_id_idx").on(table.userId), t.index("session_token_idx").on(table.token)]
+  (table) => [
+    t.index("session_user_id_idx").on(table.userId),
+    t.index("session_token_idx").on(table.token),
+  ]
 );
 
 export const account = auth.table(

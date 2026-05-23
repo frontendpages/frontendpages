@@ -30,7 +30,10 @@ export function createPlaywrightSuiteConfig({
     // Opt out of parallel tests on CI.
     workers: process.env.CI ? 1 : undefined,
     // Reporter to use
-    reporter: [["list"], ["html", { open: "never", outputFolder: path.join(suiteDir, "playwright-report") }]],
+    reporter: [
+      ["list"],
+      ["html", { open: "never", outputFolder: path.join(suiteDir, "playwright-report") }],
+    ],
 
     outputDir: path.join(suiteDir, "test-results"),
 
