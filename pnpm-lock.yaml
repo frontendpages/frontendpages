@@ -75,11 +75,11 @@ catalogs:
       version: 19.2.6
   tanstack:
     '@tanstack/react-query':
-      specifier: ^5.100.11
-      version: 5.100.11
+      specifier: ^5.100.13
+      version: 5.100.14
     '@tanstack/react-query-devtools':
-      specifier: ^5.100.11
-      version: 5.100.11
+      specifier: ^5.100.13
+      version: 5.100.14
 
 importers:
 
@@ -95,7 +95,7 @@ importers:
         specifier: 'catalog:'
         version: 24.12.4
       fallow:
-        specifier: ^2.77.0
+        specifier: ^2.79.0
         version: 2.79.0
       lefthook:
         specifier: ^2.1.8
@@ -126,7 +126,7 @@ importers:
         version: 1.14.3(@opentelemetry/api@1.9.1)(ws@8.18.3)
       '@orpc/tanstack-query':
         specifier: catalog:orpc
-        version: 1.14.3(@opentelemetry/api@1.9.1)(@orpc/client@1.14.3(@opentelemetry/api@1.9.1))(@tanstack/query-core@5.100.11)
+        version: 1.14.3(@opentelemetry/api@1.9.1)(@orpc/client@1.14.3(@opentelemetry/api@1.9.1))(@tanstack/query-core@5.100.14)
       '@repo/analytics':
         specifier: workspace:*
         version: link:../../packages/analytics
@@ -162,7 +162,7 @@ importers:
         version: 1.3.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@tanstack/react-query':
         specifier: catalog:tanstack
-        version: 5.100.11(react@19.2.6)
+        version: 5.100.14(react@19.2.6)
       better-auth:
         specifier: catalog:auth
         version: 1.6.11(@opentelemetry/api@1.9.1)(drizzle-kit@0.31.10)(drizzle-orm@0.45.2(@opentelemetry/api@1.9.1)(@types/pg@8.15.6)(@upstash/redis@1.38.0)(kysely@0.28.17)(postgres@3.4.9))(next@16.2.6(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -199,7 +199,7 @@ importers:
         version: 4.3.0
       '@tanstack/react-query-devtools':
         specifier: catalog:tanstack
-        version: 5.100.11(@tanstack/react-query@5.100.11(react@19.2.6))(react@19.2.6)
+        version: 5.100.14(@tanstack/react-query@5.100.14(react@19.2.6))(react@19.2.6)
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13
@@ -234,11 +234,11 @@ importers:
   packages/ai:
     dependencies:
       '@ai-sdk/react':
-        specifier: ^3.0.192
-        version: 3.0.192(react@19.2.6)(zod@4.4.3)
+        specifier: ^3.0.193
+        version: 3.0.193(react@19.2.6)(zod@4.4.3)
       ai:
-        specifier: ^6.0.190
-        version: 6.0.190(zod@4.4.3)
+        specifier: ^6.0.191
+        version: 6.0.191(zod@4.4.3)
       react:
         specifier: catalog:react
         version: 19.2.6
@@ -402,8 +402,8 @@ importers:
         version: 4.4.3
     devDependencies:
       '@react-email/ui':
-        specifier: ^6.3.0
-        version: 6.3.0(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: ^6.3.2
+        version: 6.3.3(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@repo/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/tsconfig
@@ -536,7 +536,7 @@ importers:
         version: 0.13.11(typescript@5.9.3)(zod@4.4.3)
       files-sdk:
         specifier: ^1.4.0
-        version: 1.4.0(@aws-sdk/client-s3@3.1049.0)(@aws-sdk/s3-presigned-post@3.1049.0)(@aws-sdk/s3-request-presigner@3.1049.0)(ai@6.0.190(zod@4.4.3))(zod@4.4.3)
+        version: 1.4.0(@aws-sdk/client-s3@3.1049.0)(@aws-sdk/s3-presigned-post@3.1049.0)(@aws-sdk/s3-request-presigner@3.1049.0)(ai@6.0.191(zod@4.4.3))(zod@4.4.3)
       zod:
         specifier: 'catalog:'
         version: 4.4.3
@@ -558,7 +558,7 @@ importers:
         version: 0.13.11(typescript@5.9.3)(zod@4.4.3)
       evlog:
         specifier: ^2.17.0
-        version: 2.17.0(ai@6.0.190(zod@4.4.3))(express@5.2.1)(hono@4.12.19)(next@16.2.6(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)
+        version: 2.17.0(ai@6.0.191(zod@4.4.3))(express@5.2.1)(hono@4.12.19)(next@16.2.6(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)
       zod:
         specifier: 'catalog:'
         version: 4.4.3
@@ -642,8 +642,8 @@ importers:
 
 packages:
 
-  '@ai-sdk/gateway@3.0.119':
-    resolution: {integrity: sha512-VAhfRWC+JexZakkVfmjaJKaTj00x7/UHdE8kMWL3NhuQAlf8oXtg9r4dfvFZrByXxchGRBvYE3biEUyibkg0xg==}
+  '@ai-sdk/gateway@3.0.120':
+    resolution: {integrity: sha512-MYKAeD2q7/sa1ZdqtL2tw0Me0B8Tok6Q/fhkJDhJl39dG8u+VBlWO9yk9lcdm784bM418o1EKObo4aOxs6+18Q==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -658,8 +658,8 @@ packages:
     resolution: {integrity: sha512-Q3BZ27qfpYqnCYGvE3vt+Qi6LGOF9R5Nmzn+9JoM1lCRsD9mYaIhfJLkSunN48nfGXJ6n+XNV0J/XVpqGQl7Dw==}
     engines: {node: '>=18'}
 
-  '@ai-sdk/react@3.0.192':
-    resolution: {integrity: sha512-QB7ViYcM1o2zN6Zo1nVD1FqAkiivCPOi1vmT/OmWAxctmXUGTdWOL7MBs9q3zuzPbZpkty4xDERwemWYoZx6Kw==}
+  '@ai-sdk/react@3.0.193':
+    resolution: {integrity: sha512-El0jUZ/B7mvBHAD5rfSDqOAhWxutVTq7BCNhfGuwfDPT9SO0TMHybh2bMkieJQI7YOfl+qNBoWrRAOHHaFb99Q==}
     engines: {node: '>=18'}
     peerDependencies:
       react: ^18 || ~19.0.1 || ~19.1.2 || ^19.2.1
@@ -2879,8 +2879,8 @@ packages:
       react: ^18.0 || ^19.0 || ^19.0.0-rc
       react-dom: ^18.0 || ^19.0 || ^19.0.0-rc
 
-  '@react-email/ui@6.3.0':
-    resolution: {integrity: sha512-wc/J0labxFTFDBBUgVDf2NruOLa5lZo7TKXLl0WR/bdY73Dp0Sao6w/nD61/8hzIUM8Yg3zDi7Ekn3IR9PW01w==}
+  '@react-email/ui@6.3.3':
+    resolution: {integrity: sha512-ur1zabkODwYZ1KxQ4ho//xDnCXycLXFar6Nxa0XhjKOo3HFY5csSYt1kjADyY+uHy948JobtARjeDUefuw04Ww==}
 
   '@rescale/nemo@2.2.0':
     resolution: {integrity: sha512-AetzvHmtJ8Q0U1SEpBmWgCZfQZgBfr++Ok0AUMHGJVdaU1w+OB1/x/PMoskulL5xrnFLRdUlmMBhYl+JTgZMjA==}
@@ -3475,20 +3475,20 @@ packages:
   '@takumi-rs/wasm@1.3.0':
     resolution: {integrity: sha512-WadZuvxsjORg7qX+WhHblucJc1EtKlhCk1hz6Qm5tnuiu2CSlODD2Jv3haxIMRcmp6XmnfwLZcCGEu4lStrA2w==}
 
-  '@tanstack/query-core@5.100.11':
-    resolution: {integrity: sha512-lmE0994apShXPj8CUxgx4ch5yUJhE9k/+tVwihBvPOyerACWdBocfFg24t8+0RhtlTd7tEgchDkhlCxNssvDxw==}
+  '@tanstack/query-core@5.100.14':
+    resolution: {integrity: sha512-5X41dGpxgeaHISCRW2oYwcSycZeULZzAunaudXT9ov1KOTj9xwt0CH6hbwqP1/z74ZWF7rYFnDpyYH07XFcZew==}
 
-  '@tanstack/query-devtools@5.100.11':
-    resolution: {integrity: sha512-47rVBDuGMW/A4ekt3YQdz+q0JSIwktwGnWCYyQUvSs2/g/Oa+6Fi2/IQk4/Y4vf6u1uwI7hOogHslgMC8f3X/Q==}
+  '@tanstack/query-devtools@5.100.14':
+    resolution: {integrity: sha512-g96SmSSQecYTYcyuAMRXr895GplJv01UGt7qttQWPOUyZ5EGz5tbRc589bMc2m5BsPFD6O0PCEAHdbDYNP6UBw==}
 
-  '@tanstack/react-query-devtools@5.100.11':
-    resolution: {integrity: sha512-75RFlJEG53Ed/Cxe5WLmgIpOElPNpgLZq7h0fLFnM5XwTYxSTk1rX/gC6MqGVXsSdrbP7zn7hPSJx9MinwiUHA==}
+  '@tanstack/react-query-devtools@5.100.14':
+    resolution: {integrity: sha512-JkP5VDgKOw3t/QSA1OABRHEqx8BuNs5MfvZRooNqdvN57SzTuGq3fKR1a2IH5rqa5HDLUm+FOXUEnB9ueHiLzg==}
     peerDependencies:
-      '@tanstack/react-query': ^5.100.11
+      '@tanstack/react-query': ^5.100.14
       react: ^18 || ^19
 
-  '@tanstack/react-query@5.100.11':
-    resolution: {integrity: sha512-J0f9s5x3LE1450nNNfYx+e/n0DMa0uOBdFJUy5r0RvmsXd4nB/n0rbHtHI1vYXhikNFan+wf51p6Tmp4c8ucrg==}
+  '@tanstack/react-query@5.100.14':
+    resolution: {integrity: sha512-oOr6aRdSFEwWhzxEkD/9ZcItM3+LjBSkeVmadWKwUssAHTsqd/7bOjWrX4AbvEkoEhgAxzN0Xk6H/aYzXiYBAw==}
     peerDependencies:
       react: ^18 || ^19
 
@@ -3734,8 +3734,8 @@ packages:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
 
-  ai@6.0.190:
-    resolution: {integrity: sha512-T+ixHbWZ6jmHRREpVVJTkFyWJeCekCdzLPan7lp1F32jG5OUw4+odlVYjtMRXVzogU+pWzpMmXdRiHUmdL/q0w==}
+  ai@6.0.191:
+    resolution: {integrity: sha512-zAxvjKebQE7YkSyyNIl0OM7i6/zygnKeF+yNUjD4nWOelYrG+LpDd6RnH6mjySI4zUpZ7o4wbnmAy8jc6u98vQ==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -6459,7 +6459,7 @@ packages:
 
 snapshots:
 
-  '@ai-sdk/gateway@3.0.119(zod@4.4.3)':
+  '@ai-sdk/gateway@3.0.120(zod@4.4.3)':
     dependencies:
       '@ai-sdk/provider': 3.0.10
       '@ai-sdk/provider-utils': 4.0.27(zod@4.4.3)
@@ -6477,10 +6477,10 @@ snapshots:
     dependencies:
       json-schema: 0.4.0
 
-  '@ai-sdk/react@3.0.192(react@19.2.6)(zod@4.4.3)':
+  '@ai-sdk/react@3.0.193(react@19.2.6)(zod@4.4.3)':
     dependencies:
       '@ai-sdk/provider-utils': 4.0.27(zod@4.4.3)
-      ai: 6.0.190(zod@4.4.3)
+      ai: 6.0.191(zod@4.4.3)
       react: 19.2.6
       swr: 2.4.1(react@19.2.6)
       throttleit: 2.1.0
@@ -8022,11 +8022,11 @@ snapshots:
     transitivePeerDependencies:
       - '@opentelemetry/api'
 
-  '@orpc/tanstack-query@1.14.3(@opentelemetry/api@1.9.1)(@orpc/client@1.14.3(@opentelemetry/api@1.9.1))(@tanstack/query-core@5.100.11)':
+  '@orpc/tanstack-query@1.14.3(@opentelemetry/api@1.9.1)(@orpc/client@1.14.3(@opentelemetry/api@1.9.1))(@tanstack/query-core@5.100.14)':
     dependencies:
       '@orpc/client': 1.14.3(@opentelemetry/api@1.9.1)
       '@orpc/shared': 1.14.3(@opentelemetry/api@1.9.1)
-      '@tanstack/query-core': 5.100.11
+      '@tanstack/query-core': 5.100.14
     transitivePeerDependencies:
       - '@opentelemetry/api'
 
@@ -8564,7 +8564,7 @@ snapshots:
       react: 19.2.6
       react-dom: 19.2.6(react@19.2.6)
 
-  '@react-email/ui@6.3.0(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@react-email/ui@6.3.3(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       esbuild: 0.28.0
       next: 16.2.6(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -9114,19 +9114,19 @@ snapshots:
       - react
       - react-dom
 
-  '@tanstack/query-core@5.100.11': {}
+  '@tanstack/query-core@5.100.14': {}
 
-  '@tanstack/query-devtools@5.100.11': {}
+  '@tanstack/query-devtools@5.100.14': {}
 
-  '@tanstack/react-query-devtools@5.100.11(@tanstack/react-query@5.100.11(react@19.2.6))(react@19.2.6)':
+  '@tanstack/react-query-devtools@5.100.14(@tanstack/react-query@5.100.14(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@tanstack/query-devtools': 5.100.11
-      '@tanstack/react-query': 5.100.11(react@19.2.6)
+      '@tanstack/query-devtools': 5.100.14
+      '@tanstack/react-query': 5.100.14(react@19.2.6)
       react: 19.2.6
 
-  '@tanstack/react-query@5.100.11(react@19.2.6)':
+  '@tanstack/react-query@5.100.14(react@19.2.6)':
     dependencies:
-      '@tanstack/query-core': 5.100.11
+      '@tanstack/query-core': 5.100.14
       react: 19.2.6
 
   '@turbo/darwin-64@2.9.14':
@@ -9381,9 +9381,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ai@6.0.190(zod@4.4.3):
+  ai@6.0.191(zod@4.4.3):
     dependencies:
-      '@ai-sdk/gateway': 3.0.119(zod@4.4.3)
+      '@ai-sdk/gateway': 3.0.120(zod@4.4.3)
       '@ai-sdk/provider': 3.0.10
       '@ai-sdk/provider-utils': 4.0.27(zod@4.4.3)
       '@opentelemetry/api': 1.9.1
@@ -9992,9 +9992,9 @@ snapshots:
       eventsource-parser: 3.0.8
     optional: true
 
-  evlog@2.17.0(ai@6.0.190(zod@4.4.3))(express@5.2.1)(hono@4.12.19)(next@16.2.6(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6):
+  evlog@2.17.0(ai@6.0.191(zod@4.4.3))(express@5.2.1)(hono@4.12.19)(next@16.2.6(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6):
     optionalDependencies:
-      ai: 6.0.190(zod@4.4.3)
+      ai: 6.0.191(zod@4.4.3)
       express: 5.2.1
       hono: 4.12.19
       next: 16.2.6(@babel/core@7.29.0)(@opentelemetry/api@1.9.1)(@playwright/test@1.60.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -10085,7 +10085,7 @@ snapshots:
 
   fflate@0.4.8: {}
 
-  files-sdk@1.4.0(@aws-sdk/client-s3@3.1049.0)(@aws-sdk/s3-presigned-post@3.1049.0)(@aws-sdk/s3-request-presigner@3.1049.0)(ai@6.0.190(zod@4.4.3))(zod@4.4.3):
+  files-sdk@1.4.0(@aws-sdk/client-s3@3.1049.0)(@aws-sdk/s3-presigned-post@3.1049.0)(@aws-sdk/s3-request-presigner@3.1049.0)(ai@6.0.191(zod@4.4.3))(zod@4.4.3):
     dependencies:
       commander: 12.1.0
     optionalDependencies:
@@ -10093,7 +10093,7 @@ snapshots:
       '@aws-sdk/s3-presigned-post': 3.1049.0
       '@aws-sdk/s3-request-presigner': 3.1049.0
       '@modelcontextprotocol/sdk': 1.29.0(zod@4.4.3)
-      ai: 6.0.190(zod@4.4.3)
+      ai: 6.0.191(zod@4.4.3)
       zod: 4.4.3
     transitivePeerDependencies:
       - '@cfworker/json-schema'
