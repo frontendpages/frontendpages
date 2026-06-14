@@ -8,6 +8,7 @@ inputs:
 
   secret-path:
     description: "Infisical secret path"
+    default: "github-actions"
     required: false
 
 runs:

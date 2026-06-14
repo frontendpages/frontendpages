@@ -30,7 +30,6 @@ jobs:
       - uses: ./.github/actions/infisical
         with:
           env-slug: prod
-          secret-path: "github-actions"
 
       - name: Pull Vercel environment
         run: pnpx vercel env pull .env --yes --environment=production --token=$VERCEL_TOKEN
