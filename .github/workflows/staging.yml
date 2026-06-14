@@ -1,6 +1,7 @@
 name: Staging / Preview
 
 permissions:
+  id-token: write
   contents: read
 
 on:
@@ -13,8 +14,6 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-  TURBO_TEAM: ${{ secrets.VERCEL_ORG_ID }}
   NEXT_TELEMETRY_DISABLED: 1
   TURBO_TELEMETRY_DISABLED: 1
 
@@ -22,21 +21,22 @@ jobs:
   deploy-web-preview:
     name: Deploy Website (Preview)
     runs-on: blacksmith-4vcpu-ubuntu-2204
-    timeout-minutes: 20
-    env:
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_WEB}}
+    timeout-minutes: 10
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
 
       - uses: ./.github/actions/setup
+      - uses: ./.github/actions/infisical
+        with:
+          env-slug: staging
+          secret-path: "github-actions"
 
       - name: Pull Vercel environment
-        run: pnpx vercel pull --yes --environment=preview --token=${{secrets.VERCEL_TOKEN}}
+        run: pnpx vercel pull --yes --environment=preview --token=$VERCEL_TOKEN
 
       - name: Build
-        run: pnpx vercel build --token=${{ secrets.VERCEL_TOKEN }}
+        run: pnpx vercel build --token=$VERCEL_TOKEN
 
       - name: Deploy
-        run: pnpx vercel deploy --prebuilt --archive=tgz --token=${{ secrets.VERCEL_TOKEN }}
+        run: pnpx vercel deploy --prebuilt --archive=tgz --token=$VERCEL_TOKEN
