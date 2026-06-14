@@ -1,6 +1,7 @@
 name: Production
 
 permissions:
+  id-token: write
   contents: read
 
 on:
@@ -20,7 +21,7 @@ jobs:
   deploy-web-production:
     name: Deploy Website (Production)
     runs-on: blacksmith-4vcpu-ubuntu-2204
-    timeout-minutes: 20
+    timeout-minutes: 10
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
