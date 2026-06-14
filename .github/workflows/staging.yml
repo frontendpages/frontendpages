@@ -1,0 +1,42 @@
+name: Staging / Preview
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+concurrency:
+  group: staging-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  TURBO_TEAM: ${{ secrets.VERCEL_ORG_ID }}
+  NEXT_TELEMETRY_DISABLED: 1
+  TURBO_TELEMETRY_DISABLED: 1
+
+jobs:
+  deploy-web-preview:
+    name: Deploy Website (Preview)
+    runs-on: blacksmith-4vcpu-ubuntu-2204
+    timeout-minutes: 20
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_WEB}}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - uses: ./.github/actions/setup
+
+      - name: Pull Vercel environment
+        run: pnpx vercel pull --yes --environment=preview --token=${{secrets.VERCEL_TOKEN}}
+
+      - name: Build
+        run: pnpx vercel build --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy
+        run: pnpx vercel deploy --prebuilt --archive=tgz --token=${{ secrets.VERCEL_TOKEN }}

@@ -1,0 +1,45 @@
+name: Production
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: production-${{ github.workflow }}
+  cancel-in-progress: false
+
+env:
+  TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  TURBO_TEAM: ${{ secrets.VERCEL_ORG_ID }}
+  NEXT_TELEMETRY_DISABLED: 1
+  TURBO_TELEMETRY_DISABLED: 1
+
+jobs:
+  deploy-web-production:
+    name: Deploy Website (Production)
+    runs-on: blacksmith-4vcpu-ubuntu-2204
+    timeout-minutes: 20
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_WEB}}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - uses: ./.github/actions/setup
+
+      - name: Pull Vercel environment
+        run: pnpx vercel env pull .env --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Pull Vercel project config
+        run: pnpx vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build
+        run: pnpx vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy
+        run: pnpx vercel deploy --prebuilt --prod --archive=tgz --token=${{ secrets.VERCEL_TOKEN }}
