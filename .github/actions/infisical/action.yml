@@ -15,7 +15,7 @@ runs:
   using: "composite"
   steps:
     - name: Authenticate with Infisical via OIDC and fetch secrets
-      uses: Infisical/secrets-action@v1.0.9
+      uses: Infisical/secrets-action@v1.0.16
       with:
         method: oidc
         domain: "https://app.infisical.com"
