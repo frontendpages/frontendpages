@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "catalog:",
-    "posthog-js": "^1.383.2",
+    "posthog-js": "^1.386.1",
     "zod": "catalog:"
   },
   "devDependencies": {
