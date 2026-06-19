@@ -28,7 +28,7 @@ catalog:
 catalogs:
   auth:
     "@better-auth/infra": 0.2.14
-    better-auth: 1.6.18
+    better-auth: 1.6.19
   next:
     next: 16.2.9
   orpc:
