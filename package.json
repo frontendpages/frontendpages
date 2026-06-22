@@ -28,7 +28,7 @@
     "@commitlint/cli": "^20.5.3",
     "@commitlint/config-conventional": "^20.5.3",
     "@types/node": "catalog:",
-    "fallow": "^2.97.0",
+    "fallow": "^2.99.0",
     "lefthook": "^2.1.9",
     "oxfmt": "^0.55.0",
     "portless": "^0.14.0",
@@ -39,5 +39,5 @@
   "engines": {
     "node": ">=22.22.3"
   },
-  "packageManager": "pnpm@10.34.3"
+  "packageManager": "pnpm@10.34.4"
 }
