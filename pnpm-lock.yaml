@@ -95,7 +95,7 @@ importers:
         specifier: 'catalog:'
         version: 24.13.2
       fallow:
-        specifier: ^2.101.0
+        specifier: ^2.102.0
         version: 2.102.0
       lefthook:
         specifier: ^2.1.9
