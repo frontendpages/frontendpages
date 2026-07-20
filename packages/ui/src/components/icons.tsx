@@ -4,16 +4,17 @@ export const Icons = {
   Logo: (props: IconProps) => {
     return (
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="256"
-        height="256"
-        viewBox="0 0 256 256"
+        width="38"
+        height="38"
+        viewBox="0 0 38 38"
         fill="none"
+        xmlns="http://www.w3.org/2000/svg"
         {...props}
       >
+        <rect width="38" height="38" fill="black" />
         <path
-          d="M202.442 0H47.188L65.9838 121.421L47 256H104.327L85.1557 125.932L187.029 143.601L176.88 100.746L84.7797 113.903L100.568 12.0294L209.584 51.1248L202.442 0Z"
-          fill="currentColor"
+          d="M26.6074 8.45459H12.9999L14.6473 19.0968L12.9834 30.8922H18.008L16.3276 19.4922L25.2565 21.0407L24.3669 17.2846L16.2947 18.4378L17.6785 9.50893L27.2334 12.9355L26.6074 8.45459Z"
+          fill="white"
         />
       </svg>
     );
@@ -69,4 +70,48 @@ export const Icons = {
       </svg>
     );
   },
+  CheckIcon: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="64"
+      height="64"
+      viewBox="0 0 24 24"
+      fill="none"
+      {...props}
+    >
+      <path
+        d="M21.5303 5.46967C21.8232 5.76256 21.8232 6.23744 21.5303 6.53033L9.53033 18.5303C9.23744 18.8232 8.76256 18.8232 8.46967 18.5303L2.46967 12.5303C2.17678 12.2374 2.17678 11.7626 2.46967 11.4697C2.76256 11.1768 3.23744 11.1768 3.53033 11.4697L9 16.9393L20.4697 5.46967C20.7626 5.17678 21.2374 5.17678 21.5303 5.46967Z"
+        fill="currentColor"
+      />
+    </svg>
+  ),
+  ChevronRightIcon: (props: IconProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none">
+      <g transform="scale(1.33333)" {...props}>
+        <polyline
+          points="6.5 2.75 12.75 9 6.5 15.25"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+      </g>
+    </svg>
+  ),
+  XIcon: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="64"
+      height="64"
+      viewBox="0 0 24 24"
+      fill="none"
+      {...props}
+    >
+      <path
+        d="M18.4697 19.5303C18.7626 19.8232 19.2374 19.8232 19.5303 19.5303C19.8232 19.2374 19.8232 18.7626 19.5303 18.4697L13.0607 12L19.5303 5.53033C19.8232 5.23744 19.8232 4.76256 19.5303 4.46967C19.2374 4.17678 18.7626 4.17678 18.4697 4.46967L12 10.9393L5.53033 4.46967C5.23744 4.17678 4.76256 4.17678 4.46967 4.46967C4.17678 4.76256 4.17678 5.23744 4.46967 5.53033L10.9393 12L4.46967 18.4697C4.17678 18.7626 4.17678 19.2374 4.46967 19.5303C4.76256 19.8232 5.23744 19.8232 5.53033 19.5303L12 13.0607L18.4697 19.5303Z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  ),
 };
