@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@orpc/client": "catalog:orpc",
     "@orpc/server": "catalog:orpc",
     "@orpc/tanstack-query": "catalog:orpc",
@@ -31,6 +32,7 @@
     "fumadocs-core": "^16.10.7",
     "fumadocs-mdx": "^15.0.13",
     "fumadocs-ui": "^16.10.7",
+    "gsap": "^3.15.0",
     "motion": "catalog:",
     "next": "catalog:next",
     "nuqs": "^2.8.9",

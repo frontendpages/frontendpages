@@ -6,9 +6,29 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
+  SheetDescription,
+  SheetFooter,
 } from "@repo/ui/components/sheet";
 import { LogoContextMenu } from "@/components/logo-context-menu";
 import Container from "@/components/container";
+import { Signature } from "@/components/graphics/signature";
+import { ColorStripes } from "@/components/graphics/color-stripes";
+import ThreeDotLines from "@/components/graphics/three-dot-lines";
+import { RevealText } from "@/components/reveal-text";
+
+function Byline() {
+  return (
+    <div className="flex items-center gap-2">
+      Project by
+      <div className="flex items-center gap-2">
+        <Icons.Powenel className="size-6" />
+        <a href="https://powenel.com/?ref=frontendpages.com" target="_blank">
+          <p className="font-stacksans-headline text-sm text-black">Powenel</p>
+        </a>
+      </div>
+    </div>
+  );
+}
 
 export function Header() {
   return (
@@ -26,34 +46,41 @@ export function Header() {
 
                 <SheetContent className="overflow-y-auto">
                   <SheetHeader className="space-y-3">
-                    <SheetTitle>Why learn frontend if AI can generate code?</SheetTitle>
+                    <SheetTitle className={"text-2xl"}>Why?</SheetTitle>
+                    <SheetDescription>
+                      Stop guessing how great interfaces are built.
+                    </SheetDescription>
 
-                    <div className="space-y-4 text-left">
-                      <p>
-                        AI is becoming excellent at generating code, but it still depends on someone
-                        who knows what to build, what looks good, and what creates a great user
-                        experience.
-                      </p>
-
-                      <p>
-                        Frontend development is more than writing components. It involves design,
-                        layout, accessibility, motion, typography, performance, interaction, and
-                        countless decisions that require taste and judgment.
-                      </p>
-
-                      <p>
-                        The best developers don't compete with AI. They use it as a tool to move
-                        faster while focusing on solving problems, crafting polished interfaces, and
-                        making better decisions.
-                      </p>
-
-                      <p>
-                        Learning frontend isn't about memorizing syntax anymore. It's about
-                        developing the skills that AI cannot reliably automate: understanding users,
-                        recognizing quality, and building products people love to use.
-                      </p>
+                    <div className="flex flex-col">
+                      <div className="space-y-4 self-stretch text-left text-[#808080]">
+                        <RevealText delay={0.1}>
+                          have you ever looked at a beautiful website or an open source project and
+                          wondered, "how did they build that?" instead of recreating toy examples,
+                          we'll break down real interfaces piece by piece, from a simple button to
+                          complex, state-driven and interaction-heavy experiences, so you understand
+                          every decision behind them.
+                        </RevealText>
+                        <RevealText delay={0.3}>
+                          if you want to learn by dissecting the web instead of memorizing it, join
+                          the waitlist and get early access to frontendpages.
+                        </RevealText>
+                      </div>
+                      <div className="mt-8">
+                        <Byline />
+                      </div>
                     </div>
                   </SheetHeader>
+                  <SheetFooter className="relative px-0 py-3">
+                    <div>
+                      <ThreeDotLines className="absolute bottom-10 left-0 z-50 overflow-x-hidden" />
+                      <div className="relative inset-x-0 z-20 flex justify-center">
+                        <ColorStripes className="translate-y-6" />
+                      </div>
+                      <div className="relative z-30 flex justify-end bg-white p-4">
+                        <Signature />
+                      </div>
+                    </div>
+                  </SheetFooter>
                 </SheetContent>
               </Sheet>
             </div>
