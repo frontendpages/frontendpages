@@ -1,8 +1,9 @@
 import { defaults, withVercelToolbar } from "@nosecone/next";
 import type { Options as NoseconeOptions } from "@nosecone/next";
-import { env } from "../env";
 
-const isDev = process.env.NODE_ENV === "development";
+import { ENV } from "#env";
+
+const isDev = ENV.APP_ENV === "development";
 
 export const securityHeadersOptions: NoseconeOptions = {
   ...defaults,
@@ -24,7 +25,11 @@ export const securityHeadersOptions: NoseconeOptions = {
         "https://*.posthog.com",
         "https://*.sentry.io",
       ],
-      workerSrc: [...defaults.contentSecurityPolicy.directives.workerSrc, "blob:", "data:"],
+      workerSrc: [
+        ...defaults.contentSecurityPolicy.directives.workerSrc,
+        "blob:",
+        "data:",
+      ],
       imgSrc: [
         ...defaults.contentSecurityPolicy.directives.imgSrc,
         "https://cdn.frontendpages.com",
@@ -34,11 +39,17 @@ export const securityHeadersOptions: NoseconeOptions = {
         ...defaults.contentSecurityPolicy.directives.styleSrc,
         "https://ogohtsopo.frontendpages.com",
       ],
-      fontSrc: [...defaults.contentSecurityPolicy.directives.fontSrc, "https://*.posthog.com"],
-      mediaSrc: [...defaults.contentSecurityPolicy.directives.mediaSrc, "https://*.posthog.com"],
+      fontSrc: [
+        ...defaults.contentSecurityPolicy.directives.fontSrc,
+        "https://*.posthog.com",
+      ],
+      mediaSrc: [
+        ...defaults.contentSecurityPolicy.directives.mediaSrc,
+        "https://*.posthog.com",
+      ],
       frameAncestors: ["'self'", "https://*.posthog.com"],
       upgradeInsecureRequests: !isDev,
-      reportUri: [env().NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT],
+      reportUri: [ENV.NEXT_PUBLIC_SENTRY_CSP_REPORT_ENDPOINT],
     },
   },
   crossOriginEmbedderPolicy: { policy: "credentialless" },

@@ -19,10 +19,10 @@ allowBuilds:
 catalog:
   "@playwright/test": 1.64.0
   "@sentry/nextjs": 11.6.0
-  "@t3-oss/env-nextjs": 0.13.11
   "@tailwindcss/postcss": 4.3.3
   "@types/node": 26.6.5
   "@varlock/infisical-plugin": 2.1.3
+  "@varlock/nextjs-integration": 1.2.4
   motion: 14.1.0
   "server-only": 0.0.1
   tailwindcss: 4.3.3
@@ -49,4 +49,5 @@ catalogs:
   tanstack:
     "@tanstack/react-query": 5.104.2
     "@tanstack/react-query-devtools": 5.104.2
-saveExact: true
+overrides:
+  "@next/env": "npm:@varlock/nextjs-integration"

@@ -12,15 +12,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@t3-oss/env-nextjs": "catalog:",
     "react": "catalog:react",
     "react-dom": "catalog:react",
-    "react-email": "6.11.1",
-    "zod": "catalog:"
+    "react-email": "6.11.1"
   },
   "devDependencies": {
     "@react-email/ui": "6.11.1",
     "@repo/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
     "@types/react": "catalog:react",
     "@types/react-dom": "catalog:react",
     "typescript": "catalog:"

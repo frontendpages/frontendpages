@@ -16,15 +16,15 @@
   },
   "scripts": {
     "clean": "rimraf .turbo node_modules",
+    "env:codegen": "varlock codegen",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
     "@flags-sdk/statsig": "0.3.1",
     "@repo/auth": "workspace:*",
-    "@t3-oss/env-nextjs": "catalog:",
     "flags": "4.3.1",
     "nanoid": "6.0.2",
-    "zod": "catalog:"
+    "varlock": "catalog:"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",

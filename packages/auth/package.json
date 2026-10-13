@@ -11,13 +11,13 @@
     "./server": "./src/server.ts"
   },
   "scripts": {
-    "clean": "rimraf node_modules .turbo"
+    "clean": "rimraf node_modules .turbo",
+    "env:codegen": "varlock codegen"
   },
   "dependencies": {
     "@repo/db": "workspace:*",
     "@repo/redis": "workspace:*",
-    "@t3-oss/env-nextjs": "catalog:",
-    "zod": "catalog:"
+    "varlock": "catalog:"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",

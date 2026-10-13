@@ -3,12 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "imports": {
+    "#env": "./env.ts"
+  },
   "scripts": {
+    "dev:app": "next dev",
+    "dev": "portless",
     "build": "next build",
     "clean": "rimraf .next .turbo node_modules next-env.d.ts",
-    "dev": "infisical run --env=dev --path=/web -- portless",
-    "dev:app": "next dev",
     "start": "next start",
+    "env:codegen": "varlock codegen",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -24,10 +28,12 @@
     "@repo/security": "workspace:*",
     "@repo/telemetry": "workspace:*",
     "@repo/ui": "workspace:*",
-    "@zanreal/nemo": "3.0.2",
     "@sentry/nextjs": "catalog:",
     "@takumi-rs/image-response": "2.15.0",
     "@tanstack/react-query": "catalog:tanstack",
+    "@varlock/infisical-plugin": "catalog:",
+    "@varlock/nextjs-integration": "catalog:",
+    "@zanreal/nemo": "3.0.2",
     "better-auth": "catalog:auth",
     "fumadocs-core": "16.17.1",
     "fumadocs-mdx": "15.4.7",
@@ -37,7 +43,8 @@
     "next": "catalog:next",
     "nuqs": "2.10.2",
     "react": "catalog:react",
-    "react-dom": "catalog:react"
+    "react-dom": "catalog:react",
+    "varlock": "catalog:"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
