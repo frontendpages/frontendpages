@@ -18,7 +18,7 @@ allowBuilds:
 
 catalog:
   "@playwright/test": 1.64.0
-  "@sentry/nextjs": 11.6.0
+  "@sentry/nextjs": 11.7.0
   "@tailwindcss/postcss": 4.3.3
   "@types/node": 26.6.5
   "@varlock/infisical-plugin": 2.1.3
