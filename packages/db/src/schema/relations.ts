@@ -1,21 +1,32 @@
-import { relations } from "drizzle-orm";
-import { account, session, user } from "./auth";
+import { defineRelations } from "drizzle-orm";
 
-export const userRelations = relations(user, ({ many }) => ({
-  sessions: many(session),
-  accounts: many(account),
-}));
+import { accounts, sessions, users, verifications } from "./auth";
 
-export const sessionRelations = relations(session, ({ one }) => ({
-  user: one(user, {
-    fields: [session.userId],
-    references: [user.id],
-  }),
-}));
-
-export const accountRelations = relations(account, ({ one }) => ({
-  user: one(user, {
-    fields: [account.userId],
-    references: [user.id],
-  }),
-}));
+export const relations = defineRelations(
+  { users, sessions, accounts, verifications },
+  (r) => ({
+    users: {
+      sessions: r.many.sessions({
+        from: r.users.id,
+        to: r.sessions.userId,
+      }),
+      accounts: r.many.accounts({
+        from: r.users.id,
+        to: r.accounts.userId,
+      }),
+    },
+    sessions: {
+      user: r.one.users({
+        from: r.sessions.userId,
+        to: r.users.id,
+      }),
+    },
+    accounts: {
+      user: r.one.users({
+        from: r.accounts.userId,
+        to: r.users.id,
+      }),
+    },
+    verifications: {},
+  })
+);

@@ -1,0 +1,3 @@
+-- No-op migration: re-records the schema snapshot under drizzle-kit 1.0-rc
+-- serialization (timestamp precision representation). Column types are
+-- unchanged; no statements to apply.

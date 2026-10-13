@@ -3,7 +3,8 @@ import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 import "server-only";
 import { env } from "../env";
-import * as schema from "./schema";
+import { relations } from "./schema/relations";
+
 export * from "drizzle-orm";
 
 const globalForDb = globalThis as unknown as {
@@ -14,13 +15,13 @@ const client = globalForDb.client ?? postgres(env().DATABASE_URL, { prepare: fal
 
 if (process.env.VERCEL_ENV !== "production") globalForDb.client = client;
 
-export const db = drizzle(client, {
-  schema,
+export const db = drizzle({
+  client,
+  relations,
   cache: upstashCache({
     url: env().UPSTASH_REDIS_REST_URL,
     token: env().UPSTASH_REDIS_REST_TOKEN,
   }),
-  casing: "snake_case",
 });
 
 export type DB = typeof db;
