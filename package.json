@@ -39,14 +39,14 @@
     "lefthook": "2.2.1",
     "oxfmt": "0.72.0",
     "oxlint": "1.86.0",
-    "oxlint-plugin-react-doctor": "0.9.14",
+    "oxlint-plugin-react-doctor": "0.9.17",
     "oxlint-tsgolint": "7.0.2003",
     "portless": "0.15.7",
     "renovate": "44.151.2",
     "rimraf": "6.1.3",
     "turbo": "2.11.7",
     "typescript": "catalog:",
-    "ultracite": "7.12.2",
+    "ultracite": "7.12.4",
     "varlock": "catalog:"
   },
   "engines": {

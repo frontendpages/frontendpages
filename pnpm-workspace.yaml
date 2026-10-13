@@ -33,8 +33,8 @@ catalogs:
   auth:
     better-auth: 1.7.7
   drizzle:
-    drizzle-kit: 1.0.0-rc.5-5935859
-    drizzle-orm: 1.0.0-rc.5-5935859
+    drizzle-kit: 1.0.0-rc.5-ab785fc
+    drizzle-orm: 1.0.0-rc.5-ab785fc
   next:
     next: 16.4.0
   orpc:
