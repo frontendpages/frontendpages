@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { links } from "@repo/config/app";
 import {
   DocsBody,
   DocsDescription,
@@ -10,22 +10,29 @@ import {
 } from "fumadocs-ui/layouts/docs/page";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import type { Metadata } from "next";
-import { getPageImage, source } from "@/lib/fuma/source";
-import { getMDXComponents } from "@/components/mdx";
-import { links } from "@repo/config/app";
+import { notFound } from "next/navigation";
 
-export default async function Page(props: PageProps<"/learn/[[...slug]]">) {
+import { getMDXComponents } from "@/components/mdx";
+import { getPageImage, source } from "@/lib/fuma/source";
+
+export default async function Page(props: {
+  params: Promise<{ slug?: string[] }>;
+}) {
   const params = await props.params;
   const page = source.getPage(params.slug);
-  if (!page) notFound();
+  if (!page) {
+    notFound();
+  }
 
-  const MDX = page.data.body;
+  const Mdx = page.data.body;
   const lastModifiedTime = page.data.lastModified;
 
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
       <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
+      <DocsDescription className="mb-0">
+        {page.data.description}
+      </DocsDescription>
       <div className="flex flex-row items-center gap-2 border-b pb-6">
         <MarkdownCopyButton markdownUrl={`${page.url}.mdx`} />
         <ViewOptionsPopover
@@ -34,7 +41,7 @@ export default async function Page(props: PageProps<"/learn/[[...slug]]">) {
         />
       </div>
       <DocsBody>
-        <MDX
+        <Mdx
           components={getMDXComponents({
             // this allows you to link to other pages with relative file paths
             a: createRelativeLink(source, page),
@@ -46,14 +53,18 @@ export default async function Page(props: PageProps<"/learn/[[...slug]]">) {
   );
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return source.generateParams();
 }
 
-export async function generateMetadata(props: PageProps<"/learn/[[...slug]]">): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ slug?: string[] }>;
+}): Promise<Metadata> {
   const params = await props.params;
   const page = source.getPage(params.slug);
-  if (!page) notFound();
+  if (!page) {
+    notFound();
+  }
 
   return {
     title: page.data.title,

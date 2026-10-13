@@ -1,16 +1,17 @@
 import { statsigAdapter } from "@flags-sdk/statsig";
-import { flag } from "flags/next";
 import type { StatsigUser } from "@flags-sdk/statsig";
+import { flag } from "flags/next";
+
 import { identify } from "./identify";
 
-type FlagConfig = {
+interface FlagConfig {
   /** unique statsig feature gate key */
   key: string;
   /** human-readable explanation of the flag */
   description?: string;
   /** fallback value when evaluation fails */
   defaultValue?: boolean;
-};
+}
 
 /**
  * creates a server-side feature flag backed by statsig.
@@ -25,8 +26,8 @@ type FlagConfig = {
  *   defaultValue: false,
  * });
  */
-export const createFlag = (config: FlagConfig) => {
-  return flag<boolean, StatsigUser>({
+export const createFlag = (config: FlagConfig) =>
+  flag<boolean, StatsigUser>({
     key: config.key,
     description: config.description,
     defaultValue: config.defaultValue,
@@ -35,4 +36,3 @@ export const createFlag = (config: FlagConfig) => {
       exposureLogging: true,
     }),
   });
-};

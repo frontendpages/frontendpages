@@ -1,21 +1,26 @@
-import { NextRequest, NextResponse } from "next/server";
-import { createNEMO } from "@rescale/nemo";
+import { getStableId } from "@repo/flags/lib/stable-id";
 import {
   securityHeadersMiddleware,
   securityHeadersOptions,
   securityHeadersOptionsWithVercelToolbar,
 } from "@repo/security/security-headers";
-import type { MiddlewareConfig } from "@rescale/nemo";
-import { getSessionCookie } from "@/lib/auth/session";
-import { getStableId } from "@repo/flags/lib/stable-id";
+import { createNEMO } from "@zanreal/nemo";
+import type { MiddlewareConfig } from "@zanreal/nemo";
 import { isMarkdownPreferred, rewritePath } from "fumadocs-core/negotiation";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+
+import { getSessionCookie } from "@/lib/auth/session";
 
 const securityHeaders =
   process.env.VERCEL_ENV === "preview"
     ? securityHeadersMiddleware(securityHeadersOptionsWithVercelToolbar)
     : securityHeadersMiddleware(securityHeadersOptions);
 
-const { rewrite: rewriteLLM } = rewritePath("/learn{/*path}", "/llms.mdx/learn{/*path}");
+const { rewrite: rewriteLLM } = rewritePath(
+  "/learn{/*path}",
+  "/llms.mdx/learn{/*path}"
+);
 
 const middlewares = {
   "/:path*": [
@@ -24,9 +29,9 @@ const middlewares = {
       const securityResponse = await securityHeaders();
       const response = NextResponse.next();
 
-      securityResponse.headers.forEach((value, key) => {
+      for (const [key, value] of securityResponse.headers) {
         response.headers.set(key, value);
-      });
+      }
 
       return response;
     },
@@ -40,7 +45,8 @@ const middlewares = {
           httpOnly: true,
           secure: process.env.NODE_ENV === "production",
           sameSite: "lax",
-          maxAge: 60 * 60 * 24 * 365, // 1 year
+          // 1 year
+          maxAge: 60 * 60 * 24 * 365,
         });
         response.headers.set("x-generated-stable-id", stableId.value);
       }
@@ -49,18 +55,20 @@ const middlewares = {
     },
   ],
   "/admin/:path*": [
-    async (request: NextRequest) => {
+    (request: NextRequest) => {
       const sessionCookie = getSessionCookie(request);
       if (!sessionCookie) {
         const callbackUrl = encodeURIComponent(request.nextUrl.pathname);
-        return NextResponse.redirect(new URL(`/auth/login?next=${callbackUrl}`, request.url));
+        return NextResponse.redirect(
+          new URL(`/auth/login?next=${callbackUrl}`, request.url)
+        );
       }
 
       return NextResponse.next();
     },
   ],
   "/learn/:path": [
-    async (request: NextRequest) => {
+    (request: NextRequest) => {
       if (isMarkdownPreferred(request)) {
         const result = rewriteLLM(request.nextUrl.pathname);
         if (result) {

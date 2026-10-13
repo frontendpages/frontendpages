@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Icons } from "@repo/ui/components/icons";
 import {
   Sheet,
@@ -9,11 +8,13 @@ import {
   SheetDescription,
   SheetFooter,
 } from "@repo/ui/components/sheet";
-import { LogoContextMenu } from "@/components/logo-context-menu";
+import Link from "next/link";
+
 import Container from "@/components/container";
-import { Signature } from "@/components/graphics/signature";
 import { ColorStripes } from "@/components/graphics/color-stripes";
+import { Signature } from "@/components/graphics/signature";
 import ThreeDotLines from "@/components/graphics/three-dot-lines";
+import { LogoContextMenu } from "@/components/logo-context-menu";
 import { RevealText } from "@/components/reveal-text";
 
 function Byline() {
@@ -22,7 +23,11 @@ function Byline() {
       Project by
       <div className="flex items-center gap-2">
         <Icons.Powenel className="size-6" />
-        <a href="https://powenel.com/?ref=frontendpages.com" target="_blank">
+        <a
+          href="https://powenel.com/?ref=frontendpages.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           <p className="font-stacksans-headline text-sm text-black">Powenel</p>
         </a>
       </div>
@@ -35,9 +40,11 @@ export function Header() {
     <header className="py-5">
       <Container>
         <div className="flex items-center justify-between">
-          <Link href={"/"} className="flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-4">
             <LogoContextMenu logo={<Icons.Logo />} />
-            <p className="font-neutral-sans text-[24px] select-none">Frontend Pages</p>
+            <p className="font-neutral-sans text-[24px] select-none">
+              Frontend Pages
+            </p>
           </Link>
           <div className="flex items-center gap-6">
             <div className="flex gap-2">
@@ -46,7 +53,7 @@ export function Header() {
 
                 <SheetContent className="overflow-y-auto">
                   <SheetHeader className="space-y-3">
-                    <SheetTitle className={"text-2xl"}>Why?</SheetTitle>
+                    <SheetTitle className="text-2xl">Why?</SheetTitle>
                     <SheetDescription>
                       Stop guessing how great interfaces are built.
                     </SheetDescription>
@@ -54,15 +61,18 @@ export function Header() {
                     <div className="flex flex-col">
                       <div className="space-y-4 self-stretch text-left text-[#808080]">
                         <RevealText delay={0.1}>
-                          have you ever looked at a beautiful website or an open source project and
-                          wondered, "how did they build that?" instead of recreating toy examples,
-                          we'll break down real interfaces piece by piece, from a simple button to
-                          complex, state-driven and interaction-heavy experiences, so you understand
-                          every decision behind them.
+                          have you ever looked at a beautiful website or an open
+                          source project and wondered, &ldquo;how did they build
+                          that?&rdquo; instead of recreating toy examples,
+                          we&apos;ll break down real interfaces piece by piece,
+                          from a simple button to complex, state-driven and
+                          interaction-heavy experiences, so you understand every
+                          decision behind them.
                         </RevealText>
                         <RevealText delay={0.3}>
-                          if you want to learn by dissecting the web instead of memorizing it, join
-                          the waitlist and get early access to frontendpages.
+                          if you want to learn by dissecting the web instead of
+                          memorizing it, join the waitlist and get early access
+                          to frontendpages.
                         </RevealText>
                       </div>
                       <div className="mt-8">

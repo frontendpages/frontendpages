@@ -4,6 +4,6 @@ test.describe("web smoke", () => {
   test("renders the landing page", async ({ page }) => {
     await page.goto("/");
 
-    await expect(page).toHaveTitle(/Frontend Pages/);
+    await expect(page).toHaveTitle(/Frontend Pages/u);
   });
 });

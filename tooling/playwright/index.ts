@@ -1,15 +1,15 @@
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+
 import { defineConfig, devices } from "@playwright/test";
 
-const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
+const repoRoot = path.resolve(import.meta.dirname, "../..");
 
-type CreatePlaywrightSuiteConfigOptions = {
+interface CreatePlaywrightSuiteConfigOptions {
   appName: string;
   baseURL?: string;
   port?: number;
   suiteDir: string;
-};
+}
 
 export function createPlaywrightSuiteConfig({
   appName,
@@ -32,7 +32,13 @@ export function createPlaywrightSuiteConfig({
     // Reporter to use
     reporter: [
       ["list"],
-      ["html", { open: "never", outputFolder: path.join(suiteDir, "playwright-report") }],
+      [
+        "html",
+        {
+          open: "never",
+          outputFolder: path.join(suiteDir, "playwright-report"),
+        },
+      ],
     ],
 
     outputDir: path.join(suiteDir, "test-results"),

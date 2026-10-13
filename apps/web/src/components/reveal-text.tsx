@@ -1,21 +1,22 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/SplitText";
 import * as React from "react";
 
 import { gsap } from "@/lib/gsap";
-import { useGSAP } from "@gsap/react";
-import { SplitText } from "gsap/SplitText";
 
-type RevealTextProps<T extends React.ElementType = "p"> = React.PropsWithChildren<{
-  as?: T;
-  className?: string;
-  duration?: number;
-  stagger?: number;
-  delay?: number;
-  ease?: string;
-  once?: boolean;
-  start?: string;
-}>;
+type RevealTextProps<T extends React.ElementType = "p"> =
+  React.PropsWithChildren<{
+    as?: T;
+    className?: string;
+    duration?: number;
+    stagger?: number;
+    delay?: number;
+    ease?: string;
+    once?: boolean;
+    start?: string;
+  }>;
 
 export function RevealText<T extends React.ElementType = "p">({
   as,
@@ -34,7 +35,9 @@ export function RevealText<T extends React.ElementType = "p">({
 
   useGSAP(
     async () => {
-      if (!ref.current) return;
+      if (!ref.current) {
+        return;
+      }
 
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         return;

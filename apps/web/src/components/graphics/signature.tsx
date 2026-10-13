@@ -8,17 +8,18 @@ export function Signature() {
       viewBox="0 0 121 29"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      role="img"
       aria-label="Frontend Pages Keyboard Signature"
     >
       <motion.path
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
         transition={{
+          // Signature draw-on effect (intentionally slow, runs once on open)
+          // oxlint-disable-next-line react-doctor/no-long-transition-duration
           duration: 2,
           ease: "easeInOut",
         }}
-        d="M24.3428 0.342773L55.1999 14.0571H0.342773L120.343 0.342773L27.7713 14.0571L75.7713 27.7713L106.628 0.342773H38.0571L41.4856 14.0571M14.0571 14.0571L24.3428 0.342773H51.7713L75.7713 27.7713M75.7713 27.7713L24.3428 0.342773"
+        d="M24.34 0.34L55.2 14.06H0.34L120.34 0.34L27.77 14.06L75.77 27.77L106.63 0.34H38.06L41.49 14.06M14.06 14.06L24.34 0.34H51.77L75.77 27.77M75.77 27.77L24.34 0.34"
         stroke="black"
         strokeWidth="0.685714"
         strokeLinecap="round"

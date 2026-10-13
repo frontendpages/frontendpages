@@ -1,6 +1,6 @@
+import { links } from "@repo/config/app";
 import type { MetadataRoute } from "next";
 
-import { links } from "@repo/config/app";
 import { source } from "@/lib/fuma/source";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -9,13 +9,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: links.base,
       lastModified: new Date(),
       changeFrequency: "daily",
-      priority: 1.0,
+      priority: 1,
     },
   ];
 
   // "/learn/**" pages
   const learnPages: MetadataRoute.Sitemap = source.getPages().map((page) => {
-    const lastModified = page.data.lastModified;
+    const { lastModified } = page.data;
     return {
       url: `${links.base}${page.url}`,
       lastModified: lastModified ? new Date(lastModified) : new Date(),

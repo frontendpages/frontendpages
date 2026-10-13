@@ -1,14 +1,17 @@
-import type { Metadata, Viewport } from "next";
+import { links, site } from "@repo/config/app";
+
 import "@/lib/orpc/server";
-import { LazyMotion, domAnimation } from "motion/react";
-import * as m from "motion/react-m";
+import { JsonLd } from "@repo/config/seo";
+import { fontsVariable } from "@repo/ui/fonts";
+
 import "@/styles/globals.css";
 import { cn } from "@repo/ui/lib/utils";
-import { fontsVariable } from "@repo/ui/fonts";
-import { links, site } from "@repo/config/app";
-import { JsonLd } from "@repo/config/seo";
-import { Providers } from "./providers";
+import { LazyMotion, domAnimation } from "motion/react";
+import * as m from "motion/react-m";
+import type { Metadata, Viewport } from "next";
+
 import { organizationSchema, websiteSchema } from "./ld";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   metadataBase: new URL(links.base),
@@ -109,7 +112,9 @@ export default function RootLayout({
           <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.23, ease: [0.455, 0.03, 0.515, 0.955] /** inOutQuad */ }}
+            // Page-load fade (intentionally cinematic, runs once per visit)
+            // oxlint-disable-next-line react-doctor/no-long-transition-duration
+            transition={{ duration: 1.23, ease: [0.455, 0.03, 0.515, 0.955] }}
           >
             <Providers>{children}</Providers>
           </m.div>

@@ -1,6 +1,10 @@
-import type { NextConfig } from "next";
-import { createMDX } from "fumadocs-mdx/next";
 import { withSentry } from "@repo/telemetry/sentry/with-sentry";
+import { varlockNextConfigPlugin } from "@varlock/nextjs-integration/plugin";
+import { createMDX } from "fumadocs-mdx/next";
+import type { NextConfig } from "next";
+
+const withVarlock = varlockNextConfigPlugin();
+
 const withMDX = createMDX({});
 
 const nextConfig: NextConfig = {
@@ -10,7 +14,10 @@ const nextConfig: NextConfig = {
   typedRoutes: true,
   transpilePackages: ["@repo/ui"],
   serverExternalPackages: ["@takumi-rs/image-response"],
-  allowedDevOrigins: ["local.web.frontendpages.id", "*.local.web.frontendpages.id"],
+  allowedDevOrigins: [
+    "local.web.frontendpages.id",
+    "*.local.web.frontendpages.id",
+  ],
   images: {
     loader: "custom",
     loaderFile: "./image-loader.ts",
@@ -19,7 +26,7 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200],
     qualities: [50, 80],
   },
-  async rewrites() {
+  rewrites() {
     return [
       {
         source: "/learn/:path*.md",
@@ -29,9 +36,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-const NextApp = () => {
-  const plugins = [withSentry, withMDX];
-  return plugins.reduce((config, plugin) => plugin(config), nextConfig);
-};
-
-export default NextApp;
+export default withVarlock(withMDX(withSentry(nextConfig)));

@@ -1,12 +1,18 @@
-import { notFound } from "next/navigation";
 import { ImageResponse } from "@takumi-rs/image-response";
 import { generate as DefaultImage } from "fumadocs-ui/og/takumi";
+import { notFound } from "next/navigation";
+
 import { getPageImage, source } from "@/lib/fuma/source";
 
-export async function GET(_req: Request, { params }: RouteContext<"/og/learn/[...slug]">) {
+export async function GET(
+  _req: Request,
+  { params }: { params: Promise<{ slug: string[] }> }
+) {
   const { slug } = await params;
   const page = source.getPage(slug.slice(0, -1));
-  if (!page) notFound();
+  if (!page) {
+    notFound();
+  }
 
   return new ImageResponse(
     <DefaultImage

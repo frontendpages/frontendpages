@@ -1,14 +1,23 @@
 const CDN_URL = "https://frontendpages.com";
 
-type Props = {
+interface Props {
   src: string;
   width: number;
   quality?: number;
-};
+}
 
-const localHosts = ["localhost", "127.0.0.1", "[::1]", "local.web.frontendpages.id"];
+const localHosts = [
+  "localhost",
+  "127.0.0.1",
+  "[::1]",
+  "local.web.frontendpages.id",
+];
 
-export default function imageLoader({ src, width, quality = 80 }: Props): string {
+export default function imageLoader({
+  src,
+  width,
+  quality = 80,
+}: Props): string {
   // Skip CDN optimization for localhosts  (local development)
   if (localHosts.some((host) => src.includes(host))) {
     return src;

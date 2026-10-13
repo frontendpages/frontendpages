@@ -1,16 +1,15 @@
-import { redirect } from "next/navigation";
-import Dashboard from "./dashboard";
-import { headers } from "next/headers";
 import { auth } from "@repo/auth/server";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 import { Suspense } from "react";
 
-export default async function DashboardPage() {
+import Dashboard from "./dashboard";
+
+export default function DashboardPage() {
   return (
-    <>
-      <Suspense>
-        <DashboardContent />
-      </Suspense>
-    </>
+    <Suspense>
+      <DashboardContent />
+    </Suspense>
   );
 }
 
@@ -19,8 +18,12 @@ async function DashboardContent() {
     headers: await headers(),
   });
 
-  if (!session?.user) redirect("/auth/login");
-  if (session.user.role !== "admin") redirect("/");
+  if (!session?.user) {
+    redirect("/auth/login");
+  }
+  if (session.user.role !== "admin") {
+    redirect("/");
+  }
 
   return (
     <div>
