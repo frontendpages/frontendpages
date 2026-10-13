@@ -1,3 +1,4 @@
+import { dash } from "@better-auth/infra";
 import { db } from "@repo/db";
 import { createRecordId } from "@repo/db/id";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
@@ -5,22 +6,22 @@ import { betterAuth } from "better-auth/minimal";
 import { admin, magicLink } from "better-auth/plugins";
 import "server-only";
 
-import { ENV } from "#env";
+import { env } from "#env";
 
 import { secondaryStorage } from "./secondary-storage";
+
+function isProduction() {
+  return process.env.NODE_ENV === "production";
+}
 
 export const auth = betterAuth({
   appName: "frontendpages",
   baseURL: {
     allowedHosts: [
-      // Local Host
-      "localhost:3000",
-      // Local development (using portless)
-      "local.web.frontendpages.id",
-      // Preview (Vercel)
-      "*.vercel.app",
-      // Production
-      "frontendpages.com",
+      "localhost:3000", // Local Host
+      "local.web.frontendpages.id", // Local development (using portless)
+      "*.vercel.app", // Preview (Vercel)
+      "frontendpages.com", // Production
     ],
   },
 
@@ -30,15 +31,13 @@ export const auth = betterAuth({
     usePlural: true,
   }),
 
-  secret: ENV.BETTER_AUTH_SECRET,
-
   secondaryStorage,
 
   socialProviders: {
     google: {
       prompt: "select_account",
-      clientId: ENV.GOOGLE_CLIENT_ID,
-      clientSecret: ENV.GOOGLE_CLIENT_SECRET,
+      clientId: env().GOOGLE_CLIENT_ID,
+      clientSecret: env().GOOGLE_CLIENT_SECRET,
     },
   },
 
@@ -59,6 +58,7 @@ export const auth = betterAuth({
   },
 
   plugins: [
+    dash(),
     admin(),
     magicLink({
       rateLimit: {
@@ -73,7 +73,7 @@ export const auth = betterAuth({
 
   advanced: {
     cookiePrefix: "frontendpages",
-    useSecureCookies: ENV.APP_ENV === "production",
+    useSecureCookies: isProduction(),
     ipAddress: {
       ipAddressHeaders: ["cf-connecting-ip", "x-forwarded-for"],
     },
