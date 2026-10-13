@@ -1,7 +1,6 @@
 {
   "extends": "@repo/tsconfig/app/dom",
   "compilerOptions": {
-    "baseUrl": ".",
     "plugins": [
       {
         "name": "next"
@@ -9,7 +8,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "collections/*": [".source/*"]
+      "collections/*": ["./.source/*"]
     }
   },
   "include": [
