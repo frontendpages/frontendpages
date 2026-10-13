@@ -5,6 +5,7 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
+    "./id": "./src/id.ts",
     "./schema": "./src/schema/index.ts"
   },
   "scripts": {
@@ -17,18 +18,18 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@paralleldrive/cuid2": "3.3.0",
     "@repo/redis": "workspace:*",
     "@t3-oss/env-nextjs": "catalog:",
-    "drizzle-orm": "catalog:",
-    "postgres": "^3.4.9",
+    "drizzle-orm": "catalog:drizzle",
+    "postgres": "3.4.9",
     "server-only": "catalog:",
-    "uuid": "^14.0.2",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
     "@types/node": "catalog:",
-    "drizzle-kit": "^0.31.10",
+    "drizzle-kit": "catalog:drizzle",
     "typescript": "catalog:"
   }
 }
